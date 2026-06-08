@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Party Structure - Rashtra Shaktibadi Party</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squads | RSP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#fafafa] text-[#111111]">
 
-  <div class="tricolor-bar"><span class="s"></span><span class="w"></span><span class="g"></span></div>
-
-  <header>
-    <div class="header-inner">
-      <div class="logo-area">
-        <div class="logo-placeholder" style="border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 1px;">RSP</div>
-        <div class="party-name">
-          <h1>Rashtra Shaktibadi Party</h1>
-          <p>রাষ্ট্র শক্তিবাদী পার্টি</p>
+    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-space font-bold text-lg tracking-tight flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-black rounded-full"></span> RSP
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-black">Home</a>
+                <a href="manifesto.html" class="text-gray-500 hover:text-black">Manifesto</a>
+                <a href="roles.html" class="text-black font-semibold">Squads</a>
+                <a href="rules.html" class="text-gray-500 hover:text-black">ECI</a>
+            </div>
+            <a href="join.html" class="text-xs font-semibold px-4 py-2 rounded-xl bg-black text-white">Join</a>
         </div>
-      </div>
-    </div>
-  </header>
+    </nav>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html">Home</a>
-      <a href="manifesto.html">Manifesto</a>
-      <a href="roles.html" class="active">Party Structure</a>
-      <a href="join.html">Join Us</a>
-      <a href="rules.html">Rules of Joining</a>
-    </div>
-  </nav>
+    <main class="pt-36 pb-24 px-6 max-w-4xl mx-auto">
+        <div class="mb-12">
+            <span class="text-xs font-mono tracking-widest text-neutral-400 uppercase">Operational Modules</span>
+            <h1 class="font-space text-4xl md:text-5xl font-bold tracking-tight text-black mt-1">Open Roles & Active Squads</h1>
+        </div>
 
-  <div style="background:var(--navy); color:var(--white); padding:50px 40px; text-align:center;">
-    <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:2.5rem; font-weight:800; text-transform:uppercase; letter-spacing:3px;">Party Structure</h2>
-    <p style="color:rgba(255,255,255,0.7); margin-top:10px;">Roles and responsibilities within Rashtra Shaktibadi Party.</p>
-  </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="bg-white border border-neutral-200/60 p-6 rounded-xl flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-mono uppercase bg-neutral-100 px-2 py-0.5 rounded text-neutral-600">Legal Architecture Core</span>
+                    <h3 class="font-space text-lg font-bold mt-3 mb-1">Statutory Compliance Tracking</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed">
+                        Monitoring legislative changes, tracking institutional directives, and filing ECI Section 29A reports.
+                    </p>
+                </div>
+                <div class="mt-6 text-[11px] font-medium text-neutral-400">Target: Legal Researchers & Scholars</div>
+            </div>
 
-  <div class="section">
-    <div class="section-title">Organisational Roles</div>
-    <table class="roles-table">
-      <thead>
-        <tr><th>#</th><th>Position</th><th>Category</th><th>Responsibilities</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td><strong>President</strong></td><td><span class="role-badge">Leadership</span></td><td>Highest authority of the party. Presides over all meetings, decisions, and represents the party at the national level.</td></tr>
-        <tr><td>2</td><td><strong>Vice President</strong></td><td><span class="role-badge">Leadership</span></td><td>Assists the President, acts in the President's absence, and oversees specific portfolios as assigned.</td></tr>
-        <tr><td>3</td><td><strong>Secretary</strong></td><td><span class="role-badge">Leadership</span></td><td>Manages day-to-day administrative functions, correspondence, and official communications of the party.</td></tr>
-        <tr><td>4</td><td><strong>General Secretary</strong></td><td><span class="role-badge">Leadership</span></td><td>Oversees organisational activities, coordinates between units, and ensures implementation of party resolutions.</td></tr>
-        <tr><td>5</td><td><strong>Treasurer</strong></td><td><span class="role-badge">Leadership</span></td><td>Manages party finances, maintains accounts, oversees fundraising, and presents financial reports to the committee.</td></tr>
-        <tr><td>6</td><td><strong>Executive Members</strong></td><td><span class="role-badge exec">Executive</span></td><td>Form the executive committee; participate in policy discussions, vote on party decisions, and lead local chapters.</td></tr>
-        <tr><td>7</td><td><strong>Member</strong></td><td><span class="role-badge member">General</span></td><td>Registered members of the party who participate in activities, campaigns, and support party initiatives.</td></tr>
-      </tbody>
-    </table>
-  </div>
+            <div class="bg-white border border-neutral-200/60 p-6 rounded-xl flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-mono uppercase bg-neutral-100 px-2 py-0.5 rounded text-neutral-600">Tech Operations Layer</span>
+                    <h3 class="font-space text-lg font-bold mt-3 mb-1">Systems Security & UI Execution</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed">
+                        Optimizing web node architecture, managing encryption engines, and deploying Tailwind UI layouts.
+                    </p>
+                </div>
+                <div class="mt-6 text-[11px] font-medium text-neutral-400">Target: Frontend & Security Engineers</div>
+            </div>
 
-  <footer>
-    <p><strong>Rashtra Shaktibadi Party</strong> | © 2024 All rights reserved.</p>
-  </footer>
+        </div>
+    </main>
 
-  <script>lucide.createIcons();</script>
 </body>
 </html>
