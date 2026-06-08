@@ -2,60 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squads | RSP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Leadership Roles | Rashtra Shaktibadi Party</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700;800;900&family=Merriweather:wght=700;900&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; color: #1e293b; }
+        .font-hindi-heading { font-family: 'Merriweather', serif; }
+        .party-card-solid { background: #ffffff; border: 2px solid #0f172a; box-shadow: 4px 4px 0px #0f172a; }
+    </style>
 </head>
-<body class="bg-[#fafafa] text-[#111111]">
+<body class="selection:bg-orange-500 selection:text-white pt-16">
 
-    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-space font-bold text-lg tracking-tight flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-black rounded-full"></span> RSP
-            </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="index.html" class="text-gray-500 hover:text-black">Home</a>
-                <a href="manifesto.html" class="text-gray-500 hover:text-black">Manifesto</a>
-                <a href="roles.html" class="text-black font-semibold">Squads</a>
-                <a href="rules.html" class="text-gray-500 hover:text-black">ECI</a>
+    <!-- Top Accent Line -->
+    <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-[100]">
+        <div class="bg-orange-500"></div><div class="bg-white"></div><div class="bg-green-600"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
+        <a href="index.html" class="flex items-center gap-2">
+            <div class="w-9 h-9 bg-orange-500 text-white flex items-center justify-center rounded-xl font-black text-lg border border-slate-900">R</div>
+            <div>
+                <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
+                <span class="text-[9px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
             </div>
-            <a href="join.html" class="text-xs font-semibold px-4 py-2 rounded-xl bg-black text-white">Join</a>
+        </a>
+        <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <a href="manifesto.html" class="hover:text-orange-600 transition-colors">Our Manifesto</a>
+            <a href="roles.html" class="text-orange-600">Leadership Roles</a>
+            <a href="rules.html" class="hover:text-orange-600 transition-colors">Party Rules</a>
         </div>
+        <a href="join.html" class="bg-orange-500 text-white text-[10px] md:text-xs font-black py-2 px-4 rounded-lg border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a]">Join / जुड़ें</a>
     </nav>
 
-    <main class="pt-36 pb-24 px-6 max-w-4xl mx-auto">
-        <div class="mb-12">
-            <span class="text-xs font-mono tracking-widest text-neutral-400 uppercase">Operational Modules</span>
-            <h1 class="font-space text-4xl md:text-5xl font-bold tracking-tight text-black mt-1">Open Roles & Active Squads</h1>
-        </div>
+    <!-- Header -->
+    <header class="bg-white pt-16 pb-10 px-4 border-b-2 border-slate-900 text-center">
+        <h1 class="font-hindi-heading text-4xl md:text-6xl font-black text-slate-900 mb-4">संगठनात्मक ढांचा <br><span class="text-blue-600">Executive Structure</span></h1>
+        <p class="text-xs md:text-base font-semibold text-slate-600 max-w-xl mx-auto">Transparency in command. Review Tier allocations from national planning boards down to local ground forces.</p>
+    </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
-            <div class="bg-white border border-neutral-200/60 p-6 rounded-xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-mono uppercase bg-neutral-100 px-2 py-0.5 rounded text-neutral-600">Legal Architecture Core</span>
-                    <h3 class="font-space text-lg font-bold mt-3 mb-1">Statutory Compliance Tracking</h3>
-                    <p class="text-neutral-500 text-xs leading-relaxed">
-                        Monitoring legislative changes, tracking institutional directives, and filing ECI Section 29A reports.
-                    </p>
-                </div>
-                <div class="mt-6 text-[11px] font-medium text-neutral-400">Target: Legal Researchers & Scholars</div>
-            </div>
-
-            <div class="bg-white border border-neutral-200/60 p-6 rounded-xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-mono uppercase bg-neutral-100 px-2 py-0.5 rounded text-neutral-600">Tech Operations Layer</span>
-                    <h3 class="font-space text-lg font-bold mt-3 mb-1">Systems Security & UI Execution</h3>
-                    <p class="text-neutral-500 text-xs leading-relaxed">
-                        Optimizing web node architecture, managing encryption engines, and deploying Tailwind UI layouts.
-                    </p>
-                </div>
-                <div class="mt-6 text-[11px] font-medium text-neutral-400">Target: Frontend & Security Engineers</div>
-            </div>
-
+    <!-- Structure Mapping -->
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+        
+        <!-- Table Representation -->
+        <div class="party-card-solid overflow-hidden rounded-xl" data-aos="fade-up">
+            <table class="w-full text-left border-collapse text-xs md:text-sm">
+                <thead>
+                    <tr class="bg-slate-900 text-white font-bold uppercase tracking-wider">
+                        <th class="p-4 border-b border-slate-900">Tier Levels</th>
+                        <th class="p-4 border-b border-slate-900">Designation Assignment</th>
+                        <th class="p-4 border-b border-slate-900">Core Directive</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y-2 divide-slate-100 font-medium text-slate-700">
+                    <tr>
+                        <td class="p-4 font-black text-slate-900">Tier 01</td>
+                        <td class="p-4">National Executive Council</td>
+                        <td class="p-4">Centralized Strategy, Policy Drafting, Approvals</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-black text-slate-900">Tier 02</td>
+                        <td class="p-4">State Working Committees</td>
+                        <td class="p-4">Regional Synchronization & Public Assemblies</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-black text-slate-900">Tier 03</td>
+                        <td class="p-4">District Coordinators</td>
+                        <td class="p-4">Constituency Desk Audits & Cadre Registrations</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-black text-slate-900">Tier 04</td>
+                        <td class="p-4">Block / Booth In-charge</td>
+                        <td class="p-4">Direct Citizen Mapping & Grassroot Verification</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 
+    <footer class="py-8 border-t-2 border-slate-900 bg-slate-50 text-center text-[10px] font-black text-slate-400 tracking-wider uppercase">
+        © 2026 RASHTRASHAKTIBADIPARTY.IN • NEW DELHI HQ
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 700 });</script>
 </body>
 </html>
