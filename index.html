@@ -295,6 +295,19 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const drawer = mobileMenu.querySelector('div');
 
+
+
+                // Copy-Paste and Right-Click Protection
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Right-click block
+        document.addEventListener('copy', event => event.preventDefault());        // Copy shortcut block
+        document.addEventListener('cut', event => event.preventDefault());         // Cut block
+        
+        // Mobile text selection protection key
+        document.body.style.webkitUserSelect = "none";
+        document.body.style.userSelect = "none";
+
+
+        
         function openMenu() {
             mobileMenu.classList.remove('hidden');
             setTimeout(() => {
