@@ -2,60 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manifesto | RSP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Our Manifesto | Rashtra Shaktibadi Party</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Merriweather:wght@700;900&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; color: #1e293b; overflow-x: hidden; }
+        .font-hindi-heading { font-family: 'Merriweather', serif; }
+        .party-card-solid { background: #ffffff; border: 2px solid #0f172a; box-shadow: 4px 4px 0px #0f172a; }
+    </style>
 </head>
-<body class="bg-[#fafafa] text-[#111111]">
+<body class="selection:bg-orange-500 selection:text-white pt-16">
 
-    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-space font-bold text-lg tracking-tight flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-black rounded-full"></span> RSP
-            </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="index.html" class="text-gray-500 hover:text-black">Home</a>
-                <a href="manifesto.html" class="text-black font-semibold">Manifesto</a>
-                <a href="roles.html" class="text-gray-500 hover:text-black">Squads</a>
-                <a href="rules.html" class="text-gray-500 hover:text-black">ECI</a>
+    <!-- Top Accent Line -->
+    <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-[100]">
+        <div class="bg-orange-500"></div><div class="bg-white"></div><div class="bg-green-600"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
+        <a href="index.html" class="flex items-center gap-2">
+            <div class="w-9 h-9 bg-orange-500 text-white flex items-center justify-center rounded-xl font-black text-lg border border-slate-900">R</div>
+            <div>
+                <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
+                <span class="text-[9px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
             </div>
-            <a href="join.html" class="text-xs font-semibold px-4 py-2 rounded-xl bg-black text-white">Join</a>
+        </a>
+        <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <a href="manifesto.html" class="text-orange-600">Our Manifesto</a>
+            <a href="roles.html" class="hover:text-orange-600 transition-colors">Leadership Roles</a>
+            <a href="rules.html" class="hover:text-orange-600 transition-colors">Party Rules</a>
         </div>
+        <a href="join.html" class="bg-orange-500 text-white text-[10px] md:text-xs font-black py-2 px-4 rounded-lg border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a]">Join / जुड़ें</a>
     </nav>
 
-    <main class="pt-36 pb-24 px-6 max-w-3xl mx-auto">
-        <div class="mb-12">
-            <span class="text-xs font-mono tracking-widest text-neutral-400 uppercase">System Objectives</span>
-            <h1 class="font-space text-4xl md:text-6xl font-bold tracking-tight mt-1 text-black">The Manifesto Charter</h1>
+    <!-- Header -->
+    <header class="bg-white pt-16 pb-10 px-4 border-b-2 border-slate-900 text-center">
+        <h1 class="font-hindi-heading text-4xl md:text-6xl font-black text-slate-900 mb-4">हमारा संकल्प पत्र <br><span class="text-orange-500">Our Manifesto</span></h1>
+        <p class="text-xs md:text-base font-semibold text-slate-600 max-w-xl mx-auto">The strategic blueprint for national overhaul, youth empowerment, and economic integrity.</p>
+    </header>
+
+    <!-- Content Grid -->
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-8">
+        <div class="party-card-solid p-6 rounded-2xl" data-aos="fade-up">
+            <h3 class="font-black text-lg text-slate-900 uppercase mb-2"><i class="fa-solid fa-building-shield mr-2 text-orange-500"></i> Administrative Integrity</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed">Complete digitization of government processes to clear out structural delays and eliminate low-level institutional leakage.</p>
         </div>
 
-        <div class="space-y-6">
-            <div class="bg-white border border-neutral-100 p-6 rounded-xl">
-                <div class="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-2"><span>[BLOCK 01]</span></div>
-                <h3 class="text-lg font-bold tracking-tight mb-2">Computational Governance & Scale</h3>
-                <p class="text-neutral-600 text-xs md:text-sm leading-relaxed">
-                    Transitioning outdated administrative processing channels into ultra-fast cloud nodes. Zero redundant paperwork, zero intermediate friction loops.
-                </p>
-            </div>
+        <div class="party-card-solid p-6 rounded-2xl" data-aos="fade-up">
+            <h3 class="font-black text-lg text-slate-900 uppercase mb-2"><i class="fa-solid fa-graduation-cap mr-2 text-blue-500"></i> Youth & Skill Ecosystem</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed">Shifting traditional layouts toward skill-verified training fields, direct industrial pipelines, and decentralized startup funding allocations.</p>
+        </div>
 
-            <div class="bg-white border border-neutral-100 p-6 rounded-xl">
-                <div class="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-2"><span>[BLOCK 02]</span></div>
-                <h3 class="text-lg font-bold tracking-tight mb-2">Sovereign Supply Chain Operations</h3>
-                <p class="text-neutral-600 text-xs md:text-sm leading-relaxed">
-                    Absolute focus on micro-manufacturing systems, self-reliant hardware pipelines, and complete clean-energy independent grids.
-                </p>
-            </div>
-
-            <div class="bg-neutral-950 text-white p-6 rounded-xl">
-                <div class="flex items-center gap-2 text-xs font-mono text-neutral-500 mb-2"><span>[BLOCK 03]</span></div>
-                <h3 class="text-lg font-bold tracking-tight mb-2 text-white">Youth Talent Execution Corridors</h3>
-                <p class="text-neutral-400 text-xs md:text-sm leading-relaxed">
-                    Replacing bureaucratic stagnation with specialized creator communities, open-source web developers, and modern legal researchers.
-                </p>
-            </div>
+        <div class="party-card-solid p-6 rounded-2xl" data-aos="fade-up">
+            <h3 class="font-black text-lg text-slate-900 uppercase mb-2"><i class="fa-solid fa-chart-line mr-2 text-green-600"></i> Economic Nationalism</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed">Providing high-capacity structural assistance to local manufacturing cores, reducing heavy external import reliance, and protecting localized trading syndicates.</p>
         </div>
     </main>
 
+    <footer class="py-8 border-t-2 border-slate-900 bg-slate-50 text-center text-[10px] font-black text-slate-400 tracking-wider uppercase">
+        © 2026 RASHTRASHAKTIBADIPARTY.IN 
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 700 });</script>
 </body>
 </html>
