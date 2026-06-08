@@ -8,31 +8,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Merriweather:wght@700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700;800;900&family=Merriweather:wght=700;900&display=swap');
         
         body { 
             font-family: 'Poppins', sans-serif; 
             background-color: #ffffff; 
             color: #1e293b;
             overflow-x: hidden;
-            /* Direct CSS blocks for preventing selection and responsive scaling */
+            
+            /* Anti-Copy and Anti-Selection Layer */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            touch-action: pan-x pan-y; 
+            touch-action: pan-x pan-y; /* Anti-zoom layout fix */
         }
         .font-hindi-heading { font-family: 'Merriweather', serif; }
         
+        /* Smooth Entrance Animation */
         .hero-fade {
-            animation: fadeIn 1s ease-out forwards;
+            animation: fadeIn 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            opacity: 0;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Bold Political Action Cards */
+        /* Bold Political Action Cards - Mobile Scale Optimized */
         .party-card-solid {
             background: #ffffff;
             border: 2px solid #0f172a;
@@ -48,7 +51,7 @@
         }
     </style>
 </head>
-<body>
+<body class="selection:bg-orange-500 selection:text-white">
 
     <!-- Top Tiranga Accent Line -->
     <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-50">
@@ -69,7 +72,7 @@
             </div>
         </div>
         
-        <!-- Laptop Links -->
+        <!-- Laptop/Desktop Links -->
         <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
             <a href="manifesto.html" class="hover:text-orange-600 transition">Our Manifesto</a>
             <a href="roles.html" class="hover:text-orange-600 transition">Leadership Roles</a>
@@ -202,7 +205,7 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- Hard Political Footer -->
     <footer class="py-10 px-4 border-t-2 border-slate-900 bg-slate-50 text-center">
         <div class="max-w-4xl mx-auto space-y-5">
             <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-[11px] md:text-xs font-bold uppercase tracking-wider text-slate-500">
@@ -217,31 +220,32 @@
         </div>
     </footer>
 
-    <!-- Anti-Copy & Anti-Zoom Execution Scripts -->
+    <!-- Strict Anti-Copy & Anti-Zoom Script Modules -->
     <script>
-        // Disable Right Click & Context Menu
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        // Security Lock: Disable Context Menu / Right Click
+        document.addEventListener('contextmenu', e => e.preventDefault());
 
-        // Disable Common Copy/Paste/Inspection Shortcut Keys
+        // Security Lock: Block Hotkeys (Copy, Paste, Source Code Inspect)
         document.onkeydown = function(e) {
-            if (e.ctrlKey && [67, 86, 85, 83, 73].includes(e.keyCode)) return false; // Ctrl+C, Ctrl+V, Ctrl+U, Ctrl+S, Ctrl+I
-            if (e.key === 'F12') return false; // F12 Developer Tool
+            if (e.ctrlKey && [67, 86, 85, 83, 73].includes(e.keyCode)) return false; // Ctrl + C, V, U, S, I
+            if (e.key === 'F12') return false; // F12 Developer Board
         };
 
-        // Extra mobile touch protection to block pinch zoom gestures
+        // Mobile UX: Prevent Accidental Pinch-Zoom/Multi-Touch Scales
         document.addEventListener('touchstart', function(event) {
             if (event.touches.length > 1) {
                 event.preventDefault();
             }
         }, { passive: false });
-        
-        let lastTouchEnd = 0;
+
+        // Mobile UX: Block Double-Tap Rapid Auto Zooming
+        let lastTouchTime = 0;
         document.addEventListener('touchend', function(event) {
-            let now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault(); // Blocks rapid double tap tracking zoom
+            let currentTouchTime = (new Date()).getTime();
+            if (currentTouchTime - lastTouchTime <= 300) {
+                event.preventDefault();
             }
-            lastTouchEnd = now;
+            lastTouchTime = currentTouchTime;
         }, false);
     </script>
 </body>
