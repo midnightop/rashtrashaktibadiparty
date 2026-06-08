@@ -2,66 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Strict Anti-Zoom Meta Constraints -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rashtra Shaktibadi Party (RSP) | Official Website</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700;800;900&family=Merriweather:wght=700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Merriweather:wght@700;900&display=swap');
         
         body { 
             font-family: 'Poppins', sans-serif; 
             background-color: #ffffff; 
             color: #1e293b;
             overflow-x: hidden;
-            
-            /* Anti-Copy and Anti-Selection Layer */
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            touch-action: pan-x pan-y; /* Anti-zoom layout fix */
+            touch-action: pan-x pan-y;
         }
         .font-hindi-heading { font-family: 'Merriweather', serif; }
         
-        /* Smooth Entrance Animation */
-        .hero-fade {
-            animation: fadeIn 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-            opacity: 0;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Bold Political Action Cards - Mobile Scale Optimized */
+        /* Brutalism Style Party Cards */
         .party-card-solid {
             background: #ffffff;
             border: 2px solid #0f172a;
             box-shadow: 4px 4px 0px #0f172a;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
+        /* Mobile updates - active states instead of hover for better touch feel */
+        @media (max-width: 767px) {
+            .party-card-solid:active {
+                transform: translate(2px, 2px);
+                box-shadow: 1px 1px 0px #0f172a;
+            }
+        }
+
         @media (min-width: 768px) {
             .party-card-solid:hover {
-                transform: translate(-2px, -2px);
+                transform: translate(-4px, -4px);
                 box-shadow: 8px 8px 0px #ea580c;
                 border-color: #ea580c;
             }
         }
     </style>
 </head>
-<body class="selection:bg-orange-500 selection:text-white">
+<body class="selection:bg-orange-500 selection:text-white pt-16">
 
     <!-- Top Tiranga Accent Line -->
-    <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-50">
+    <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-[100]">
         <div class="bg-orange-500"></div>
         <div class="bg-white"></div>
         <div class="bg-green-600"></div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <nav class="sticky top-1.5 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
+    <!-- Main Navigation Bar (Fully Mobile Responsive Layout) -->
+    <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
         <div class="flex items-center gap-2 md:gap-3">
             <div class="w-9 h-9 md:w-10 md:h-10 bg-orange-500 text-white flex items-center justify-center rounded-xl font-black text-lg shadow-md border border-slate-900 flex-shrink-0">
                 R
@@ -74,21 +71,45 @@
         
         <!-- Laptop/Desktop Links -->
         <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
-            <a href="manifesto.html" class="hover:text-orange-600 transition">Our Manifesto</a>
-            <a href="roles.html" class="hover:text-orange-600 transition">Leadership Roles</a>
-            <a href="rules.html" class="hover:text-orange-600 transition">Party Rules</a>
+            <a href="manifesto.html" class="hover:text-orange-600 transition-colors">Our Manifesto</a>
+            <a href="roles.html" class="hover:text-orange-600 transition-colors">Leadership Roles</a>
+            <a href="rules.html" class="hover:text-orange-600 transition-colors">Party Rules</a>
         </div>
 
-        <div>
+        <div class="flex items-center gap-2">
             <a href="join.html" class="bg-orange-500 text-white text-[10px] md:text-xs font-black py-2 md:py-2.5 px-4 md:px-6 rounded-lg border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all uppercase tracking-wider">
                 Join / जुड़ें
             </a>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-slate-900 p-2 focus:outline-none focus:bg-slate-100 rounded-lg">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900/40 z-40 hidden backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="fixed right-0 top-0 bottom-0 w-[75%] max-w-xs bg-white border-l-2 border-slate-900 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                    <span class="font-black text-xs uppercase tracking-widest text-slate-400">Navigation</span>
+                    <button id="close-btn" class="text-slate-900 p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+                <div class="flex flex-col gap-4 text-sm font-bold uppercase tracking-wide text-slate-800">
+                    <a href="manifesto.html" class="py-2 hover:text-orange-600 border-b border-slate-50">Our Manifesto</a>
+                    <a href="roles.html" class="py-2 hover:text-orange-600 border-b border-slate-50">Leadership Roles</a>
+                    <a href="rules.html" class="py-2 hover:text-orange-600 border-b border-slate-50">Party Rules</a>
+                </div>
+            </div>
+            <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider text-center">
+                Rashtra Shaktibadi Party
+            </div>
+        </div>
+    </div>
+
     <!-- Heavy Political Hero Section -->
-    <header class="relative bg-white pt-12 md:pt-20 pb-12 px-4 border-b-2 border-slate-900 overflow-hidden hero-fade">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
+    <header class="relative bg-white pt-12 md:pt-20 pb-12 px-4 border-b-2 border-slate-900 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <span class="inline-block bg-slate-900 text-white text-[9px] md:text-[10px] font-black tracking-[0.25em] md:tracking-[0.3em] uppercase px-3 py-1 md:py-1.5 rounded-full mb-4 md:mb-6 border border-orange-500">
                 Official Digital Gateway
             </span>
@@ -99,11 +120,11 @@
             <p class="text-xs md:text-base font-semibold text-slate-600 max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed px-2">
                 Building a disciplined, transparent, and powerful nation-first ecosystem. Explore our core values, structural directives, and official vision.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 max-w-xs sm:max-w-none mx-auto">
-                <a href="manifesto.html" class="bg-slate-900 text-white text-xs font-bold py-3 px-6 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] text-center uppercase tracking-wider">
+            <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 max-w-xs sm:max-w-none mx-auto px-4">
+                <a href="manifesto.html" class="bg-slate-900 text-white text-xs font-bold py-3.5 px-6 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] text-center uppercase tracking-wider active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
                     Read Core Agenda
                 </a>
-                <a href="join.html" class="bg-white text-slate-900 text-xs font-bold py-3 px-6 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_#16a34a] text-center uppercase tracking-wider">
+                <a href="join.html" class="bg-white text-slate-900 text-xs font-bold py-3.5 px-6 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_#16a34a] text-center uppercase tracking-wider active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
                     Become a Volunteer
                 </a>
             </div>
@@ -111,17 +132,16 @@
     </header>
 
     <!-- Core Pillars Grid -->
-    <main class="max-w-6xl mx-auto px-4 py-12 md:py-16 space-y-10 md:space-y-12">
+    <main class="max-w-6xl mx-auto px-4 py-12 md:py-16 space-y-12 md:space-y-20">
         
-        <div class="text-center">
+        <div class="text-center" data-aos="fade-up">
             <h2 class="text-xl md:text-3xl font-extrabold uppercase tracking-tight text-slate-900">Party Framework & Directives</h2>
             <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-1.5 font-bold">Select a division to audit our protocols</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
             <!-- Manifesto Card -->
-            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between">
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="w-11 h-11 bg-orange-100 text-orange-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
                         <i class="fa-solid fa-bullhorn"></i>
@@ -135,7 +155,7 @@
             </div>
 
             <!-- Roles Card -->
-            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between">
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="w-11 h-11 bg-blue-100 text-blue-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
                         <i class="fa-solid fa-users-gear"></i>
@@ -149,7 +169,7 @@
             </div>
 
             <!-- Rules Card -->
-            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between">
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="w-11 h-11 bg-green-100 text-green-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
                         <i class="fa-solid fa-gavel"></i>
@@ -161,14 +181,55 @@
                     Read Guidelines
                 </a>
             </div>
-
         </div>
+
+        <!-- NEW: Dedicated Team / Leadership Section (Highly Mobile Scaled) -->
+        <section class="space-y-10 pt-6">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-xl md:text-3xl font-extrabold uppercase tracking-tight text-slate-900">National Leadership Team</h2>
+                <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-1.5 font-bold">The force driving the vision forward</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2 md:px-0">
+                <!-- Leader 1 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Rajesh Sharma</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-orange-600 uppercase tracking-wider">National President</span>
+                </div>
+                <!-- Leader 2 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Amit Chaudhary</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-slate-600 uppercase tracking-wider">General Secretary</span>
+                </div>
+                <!-- Leader 3 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Dr. Vikram Singh</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-green-600 uppercase tracking-wider">Youth Wing Chief</span>
+                </div>
+                <!-- Leader 4 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Sanjay Mishra</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-purple-600 uppercase tracking-wider">Chief Strategist</span>
+                </div>
+            </div>
+        </section>
 
         <!-- Official Registry Block -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            
             <!-- Communications Gateway -->
-            <div class="party-card-solid p-6 md:p-8 rounded-2xl md:col-span-2 flex flex-col justify-between">
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl md:col-span-2 flex flex-col justify-between" data-aos="fade-right">
                 <div>
                     <span class="text-[9px] md:text-[10px] font-black text-orange-600 uppercase tracking-widest block mb-1">Central Bureau</span>
                     <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight mb-2">Official Secretariat Desk</h3>
@@ -181,14 +242,14 @@
                         <i class="fa-solid fa-envelope text-slate-400 text-xs"></i>
                         <span class="text-[11px] md:text-xs font-mono font-bold text-slate-800 break-all">info@rashtrashaktibadiparty.in</span>
                     </div>
-                    <a href="mailto:info@rashtrashaktibadiparty.in" class="bg-orange-500 text-white text-center text-xs font-bold py-2 px-5 rounded-lg border border-slate-900 shadow-[2px_2px_0px_#0f172a] hover:bg-slate-900 transition-colors uppercase tracking-wider block sm:inline-block">
+                    <a href="mailto:info@rashtrashaktibadiparty.in" class="bg-orange-500 text-white text-center text-xs font-bold py-2.5 px-5 rounded-lg border border-slate-900 shadow-[2px_2px_0px_#0f172a] hover:bg-slate-900 transition-colors uppercase tracking-wider block sm:inline-block">
                         Send Mail
                     </a>
                 </div>
             </div>
 
             <!-- Join Banner Box -->
-            <div class="party-card-solid p-6 md:p-8 rounded-2xl bg-slate-900 text-white border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] flex flex-col justify-between">
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl bg-slate-900 text-white border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] flex flex-col justify-between" data-aos="fade-left">
                 <div>
                     <span class="text-[9px] md:text-[10px] font-black text-orange-400 uppercase tracking-widest block mb-1">Operational Wing</span>
                     <h3 class="text-xl md:text-2xl font-extrabold text-white tracking-tight mb-2">Join the Cadre</h3>
@@ -196,11 +257,10 @@
                         Enlist in our decentralized active database to mobilize structural ground movements within your state constituency.
                     </p>
                 </div>
-                <a href="join.html" class="mt-6 md:mt-8 w-full bg-orange-500 text-white font-black text-center py-2.5 rounded-xl text-xs hover:bg-white hover:text-slate-900 border border-slate-900 transition-all tracking-wider uppercase shadow-md block">
+                <a href="join.html" class="mt-6 md:mt-8 w-full bg-orange-500 text-white font-black text-center py-3 rounded-xl text-xs hover:bg-white hover:text-slate-900 border border-slate-900 transition-all tracking-wider uppercase shadow-md block">
                     Apply for Cadre
                 </a>
             </div>
-
         </section>
 
     </main>
@@ -215,38 +275,47 @@
             </div>
             <div class="h-px w-12 bg-slate-300 mx-auto"></div>
             <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] leading-relaxed">
-                © 2026 RASHTRASHAKTIBADIPARTY.IN • RASHTRA SHAKTIBADI PARTY 
+                © 2026 RASHTRASHAKTIBADIPARTY.IN • RASHTRA SHAKTIBADI PARTY • NEW DELHI HQ
             </p>
         </div>
     </footer>
 
-    <!-- Strict Anti-Copy & Anti-Zoom Script Modules -->
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Security Lock: Disable Context Menu / Right Click
-        document.addEventListener('contextmenu', e => e.preventDefault());
+        // Initialize Animations
+        AOS.init({
+            once: true, // Animation repeats off to save mobile battery
+            duration: 700
+        });
 
-        // Security Lock: Block Hotkeys (Copy, Paste, Source Code Inspect)
-        document.onkeydown = function(e) {
-            if (e.ctrlKey && [67, 86, 85, 83, 73].includes(e.keyCode)) return false; // Ctrl + C, V, U, S, I
-            if (e.key === 'F12') return false; // F12 Developer Board
-        };
+        // Smart & Clean Mobile Navbar Controls
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const drawer = mobileMenu.querySelector('div');
 
-        // Mobile UX: Prevent Accidental Pinch-Zoom/Multi-Touch Scales
-        document.addEventListener('touchstart', function(event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        }, { passive: false });
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0');
+                drawer.classList.remove('translate-x-full');
+            }, 10);
+        }
 
-        // Mobile UX: Block Double-Tap Rapid Auto Zooming
-        let lastTouchTime = 0;
-        document.addEventListener('touchend', function(event) {
-            let currentTouchTime = (new Date()).getTime();
-            if (currentTouchTime - lastTouchTime <= 300) {
-                event.preventDefault();
-            }
-            lastTouchTime = currentTouchTime;
-        }, false);
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0');
+            drawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) closeMenu();
+        });
     </script>
 </body>
 </html>
