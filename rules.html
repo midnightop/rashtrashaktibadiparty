@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rules of Joining - Rashtra Shaktibadi Party</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Rules | RSP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#fafafa] text-[#111111]">
 
-  <div class="tricolor-bar"><span class="s"></span><span class="w"></span><span class="g"></span></div>
-
-  <header>
-    <div class="header-inner">
-      <div class="logo-area">
-        <div class="logo-placeholder" style="border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 1px;">RSP</div>
-        <div class="party-name">
-          <h1>Rashtra Shaktibadi Party</h1>
-          <p>রাষ্ট্র শক্তিবাদী পার্টি</p>
+    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-space font-bold text-lg tracking-tight flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-black rounded-full"></span> RSP
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-black">Home</a>
+                <a href="manifesto.html" class="text-gray-500 hover:text-black">Manifesto</a>
+                <a href="roles.html" class="text-gray-500 hover:text-black">Squads</a>
+                <a href="rules.html" class="text-black font-semibold">ECI</a>
+            </div>
+            <a href="join.html" class="text-xs font-semibold px-4 py-2 rounded-xl bg-black text-white">Join</a>
         </div>
-      </div>
-    </div>
-  </header>
+    </nav>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html">Home</a>
-      <a href="manifesto.html">Manifesto</a>
-      <a href="roles.html">Party Structure</a>
-      <a href="join.html">Join Us</a>
-      <a href="rules.html" class="active">Rules of Joining</a>
-    </div>
-  </nav>
+    <main class="pt-36 pb-24 px-6 max-w-3xl mx-auto">
+        <div class="mb-10">
+            <span class="text-xs font-mono tracking-widest text-neutral-400 uppercase">Legal Alignment</span>
+            <h1 class="font-space text-4xl font-bold tracking-tight text-black mt-1">Constitutional Rules & Directives</h1>
+        </div>
 
-  <div style="background:var(--navy); color:var(--white); padding:50px 40px; text-align:center;">
-    <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:2.5rem; font-weight:800; text-transform:uppercase; letter-spacing:3px;">Rules of Joining</h2>
-    <p style="color:rgba(255,255,255,0.7); margin-top:10px;">Membership eligibility criteria and code of conduct.</p>
-  </div>
+        <div class="bg-white border border-neutral-200/60 rounded-2xl p-8 space-y-6 text-xs md:text-sm text-neutral-600 leading-relaxed font-normal">
+            <div>
+                <h3 class="font-space text-base font-bold text-black mb-1">1. Statutory ECI Compliance Mandate</h3>
+                <p>
+                    RSP maintains absolute operational discipline under Section 29A of the Representation of the People Act, 1951. Members are strictly filtered using valid electoral database confirmation streams.
+                </p>
+            </div>
+            <div class="border-t border-neutral-100 pt-5">
+                <h3 class="font-space text-base font-bold text-black mb-1">2. Complete Encrypted Privacy Isolation</h3>
+                <p>
+                    Voter IDs and localized residential coordinates are isolated in air-gapped system segments. No third-party data access hooks are built into our architecture.
+                </p>
+            </div>
+        </div>
+    </main>
 
-  <div class="section">
-    <div class="section-title">Membership Rules</div>
-    <div class="rules-list">
-      <div class="rule-item"><div class="rule-num">1</div><div><h4>Age Requirement</h4><p>The applicant must be a minimum of 18 years of age.</p></div></div>
-      <div class="rule-item"><div class="rule-num">2</div><div><h4>Indian Citizenship</h4><p>Membership is open exclusively to citizens of India.</p></div></div>
-      <div class="rule-item"><div class="rule-num">3</div><div><h4>Single Party Membership</h4><p>An applicant must not be an active member of any other registered political party.</p></div></div>
-      <div class="rule-item"><div class="rule-num">4</div><div><h4>Code of Conduct</h4><p>Members must conduct themselves with dignity. Hate speech or anti-national activity is prohibited.</p></div></div>
-    </div>
-    <div style="margin-top:24px; text-align:center;">
-      <a href="join.html" class="btn btn-green" style="display: inline-flex; align-items: center; gap: 8px;">Apply for Membership <i data-lucide="arrow-right" style="width:16px; height:16px;"></i></a>
-    </div>
-  </div>
-
-  <footer>
-    <p><strong>Rashtra Shaktibadi Party</strong> | © 2024 All rights reserved.</p>
-  </footer>
-
-  <script>lucide.createIcons();</script>
 </body>
 </html>
