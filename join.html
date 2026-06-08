@@ -29,22 +29,6 @@
             border: 2px solid #0f172a;
             box-shadow: 4px 4px 0px #0f172a;
         }
-
-        /* Brutalist Input Formatting */
-        .input-brutal {
-            border: 2px solid #0f172a;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 13px;
-            outline: none;
-            background: #ffffff;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .input-brutal:focus {
-            box-shadow: 3px 3px 0px #ea580c;
-            border-color: #ea580c;
-        }
     </style>
 </head>
 <body class="selection:bg-orange-500 selection:text-white pt-16">
@@ -60,7 +44,7 @@
     <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
         <a href="index.html" class="flex items-center gap-2 md:gap-3">
            <img src="logo.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-xl object-cover flex-shrink-0 shadow-md">
- <div>
+            <div>
                 <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
                 <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
             </div>
@@ -90,79 +74,60 @@
                 <span class="text-orange-500">Join the Mission</span>
             </h1>
             <p class="text-xs md:text-sm font-semibold text-slate-600 max-w-xl mx-auto leading-relaxed">
-                Enlist in the decentralized operational ecosystem. Fill out the official verification form below to activate your registration.
+                Enlist in the decentralized operational ecosystem. Follow the verification steps below to activate your registration.
             </p>
         </div>
     </header>
 
-    <!-- Form Container -->
+    <!-- Content & Action Container -->
     <main class="max-w-xl mx-auto px-4 py-12">
-        <div class="party-card-solid p-6 md:p-8 rounded-2xl" data-aos="zoom-in" data-aos-duration="600">
-            <form action="#" method="POST" class="flex flex-col gap-5" onsubmit="event.preventDefault(); alert('Registration Framework Simulated Successfully!');">
-                
-                <!-- Full Name -->
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[11px] font-black uppercase text-slate-700 tracking-wider">Full Name / पूरा नाम</label>
-                    <input type="text" class="input-brutal" placeholder="Enter your full official name" required>
-                </div>
+        <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col gap-6" data-aos="zoom-in" data-aos-duration="600">
+            
+            <!-- Important Information Section -->
+            <div class="flex flex-col gap-3 text-slate-800">
+                <h3 class="text-sm font-black uppercase tracking-wider text-orange-600 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info"></i> Important Instructions
+                </h3>
+                <ul class="text-xs font-semibold flex flex-col gap-2.5 list-none pl-0 text-slate-600">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-square-poll-horizontal text-slate-900 mt-0.5"></i>
+                        <span>Official registration is hosted securely on Google Forms to maintain decentralized data records.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-shield-halved text-slate-900 mt-0.5"></i>
+                        <span>Ensure you provide a valid 10-digit primary smartphone number for active verification protocols.</span>
+                    </li>
+                </ul>
+            </div>
 
-                <!-- Phone Number -->
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[11px] font-black uppercase text-slate-700 tracking-wider">Mobile Number / मोबाइल नंबर</label>
-                    <input type="tel" class="input-brutal" placeholder="10-digit primary smartphone number" pattern="[0-9]{10}" required>
-                </div>
+            <!-- Rules Notice Box -->
+            <div class="p-4 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col gap-2">
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-500 block">Prerequisite Protocol</span>
+                <p class="text-xs font-bold text-slate-700 leading-relaxed">
+                    Before proceeding to the application form, all incoming candidates are strictly required to read and accept the official structural framework guidelines.
+                </p>
+                <a href="rules.html" class="inline-flex items-center gap-1.5 text-xs font-black text-orange-600 hover:text-orange-700 uppercase tracking-wider mt-1 transition-colors">
+                    Read Party Rules / नियम पढ़ें <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
 
-                <!-- State -->
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[11px] font-black uppercase text-slate-700 tracking-wider">State Jurisdiction / राज्य</label>
-                    <select class="input-brutal bg-white font-bold text-slate-800 cursor-pointer" required>
-                        <option value="" disabled selected>-- Select Your State --</option>
-                        <option value="delhi">Delhi (NCR)</option>
-                        <option value="up">Uttar Pradesh</option>
-                        <option value="bihar">Bihar</option>
-                        <option value="wb">West Bengal</option>
-                        <option value="mp">Madhya Pradesh</option>
-                        <option value="rajasthan">Rajasthan</option>
-                    </select>
-                </div>
+            <!-- Action Button -->
+            <div class="flex flex-col gap-2 pt-2">
+                <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="w-full bg-orange-500 text-white font-black text-center py-4 rounded-xl text-xs border-2 border-slate-900 shadow-[4px_4px_0px_#0f172a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all tracking-wider uppercase block">
+                    Proceed to Google Form
+                </a>
+                <span class="text-[9px] font-bold text-center text-slate-400 block uppercase tracking-wide">
+                    Opens safely in a new browser tab
+                </span>
+            </div>
 
-                <!-- Wing Allocation -->
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[11px] font-black uppercase text-slate-700 tracking-wider">Preferred Operational Wing / प्राथमिक विंग</label>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-slate-800">
-                        <label class="flex items-center gap-2 p-3 border-2 border-slate-900 rounded-lg cursor-pointer hover:bg-slate-50 active:bg-slate-100">
-                            <input type="radio" name="wing_selection" value="youth" class="w-4 h-4 accent-orange-500" checked>
-                            Youth Wing / युवा मोर्चा
-                        </label>
-                        <label class="flex items-center gap-2 p-3 border-2 border-slate-900 rounded-lg cursor-pointer hover:bg-slate-50 active:bg-slate-100">
-                            <input type="radio" name="wing_selection" value="it_media" class="w-4 h-4 accent-orange-500">
-                            Media & IT Cell
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Separation Line -->
-                <div class="h-px border-t-2 border-dashed border-slate-200 my-2"></div>
-
-                <!-- Disclaimer Check -->
-                <label class="flex items-start gap-2.5 cursor-pointer text-[11px] font-bold text-slate-500 leading-normal select-none">
-                    <input type="checkbox" class="w-4 h-4 accent-slate-900 mt-0.5 border-2 border-slate-900 rounded" required>
-                    <span>I hereby declare that I will strictly maintain party discipline and abide by the non-negotiable guidelines of the structural constitution.</span>
-                </label>
-
-                <!-- Submit Button -->
-                <button type="submit" class="w-full mt-2 bg-orange-500 text-white font-black text-center py-3.5 rounded-xl text-xs border-2 border-slate-900 shadow-[4px_4px_0px_#0f172a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all tracking-wider uppercase">
-                    Submit Verification Request
-                </button>
-
-            </form>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="py-10 border-t-2 border-slate-900 bg-slate-50 text-center">
         <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
-            © 2026 RASHTRASHAKTIBADIPARTY.IN • RASHTRA SHAKTIBADI PARTY • NEW DELHI HQ
+            © 2026 RASHTRASHAKTIBADIPARTY.IN • RASHTRA SHAKTIBADI PARTY 
         </p>
     </footer>
 
