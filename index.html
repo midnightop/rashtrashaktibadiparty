@@ -2,117 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashtra Shaktibadi Party | RSP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rashtra Shaktibadi Party | Official Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,700;1,700&family=Inter:wght@300;400;500;600;700;900&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff; /* Explicit Clean White Background */
+            color: #0f172a;
+            overflow-x: hidden;
+            touch-action: pan-x pan-y;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .fade-in-section {
+            animation: fadeInUp 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Clean White Cards with Custom Dynamic Hover States */
+        .party-card {
+            background: #ffffff; /* Clean White Card Base */
+            border: 1px solid #f1f5f9;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover Accents targeting Specific Identities */
+        .hover-manifesto:hover {
+            box-shadow: 0 30px 60px -15px rgba(234, 88, 12, 0.08);
+            border-color: #ea580c; /* Saffron Accent on Hover */
+            transform: translateY(-6px);
+        }
+        .hover-roles:hover {
+            box-shadow: 0 30px 60px -15px rgba(29, 78, 216, 0.08);
+            border-color: #1d4ed8; /* Navy Blue Accent on Hover */
+            transform: translateY(-6px);
+        }
+        .hover-rules:hover {
+            box-shadow: 0 30px 60px -15px rgba(13, 148, 136, 0.08);
+            border-color: #0d9488; /* Teal/Emerald Accent on Hover */
+            transform: translateY(-6px);
+        }
+
+        /* Glassmorphism Header Setup */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
-<body class="bg-[#fafafa] text-[#111111]">
+<body class="selection:bg-amber-100 selection:text-amber-900">
 
-    <!-- Fixed Header -->
-    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-space font-bold text-lg tracking-tight flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-black rounded-full"></span>
-                RSP <span class="text-gray-400 font-normal text-sm">/ রাষ্ট্র শক্তিবাদী</span>
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-slate-100 px-5 py-4 md:px-16 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="p-2 bg-slate-900 rounded-xl text-amber-500 flex items-center justify-center">
+                <i class="fa-solid fa-building-flag text-sm"></i>
+            </div>
+            <span class="font-black tracking-tighter text-base uppercase">RSP <span class="text-xs text-blue-700 block md:inline md:ml-1 font-medium tracking-normal normal-case">Official Hub</span></span>
+        </div>
+        
+        <!-- Navigation Link Tabs (Referencing Image 1000360166.jpg) -->
+        <div class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+            <a href="manifesto.html" class="hover:text-slate-900 transition">Manifesto</a>
+            <a href="roles.html" class="hover:text-slate-900 transition">Roles</a>
+            <a href="rules.html" class="hover:text-slate-900 transition">Rules</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <!-- Custom Premium Navigation Button (Saffron Orange Base) -->
+            <a href="join.html" class="bg-orange-600 text-white text-[10px] font-black py-2.5 px-6 rounded-full hover:bg-slate-900 transition-all uppercase tracking-wider shadow-md">
+                Join Movement
             </a>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-tight">
-                <a href="index.html" class="text-black font-semibold">Home</a>
-                <a href="manifesto.html" class="text-gray-500 hover:text-black">Manifesto</a>
-                <a href="roles.html" class="text-gray-500 hover:text-black">Squads & Roles</a>
-                <a href="rules.html" class="text-gray-500 hover:text-black">ECI Rules</a>
-            </div>
-
-            <div>
-                <a href="join.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-black text-white text-xs font-semibold hover:bg-neutral-800 tracking-wide">
-                    Join Movement
-                </a>
-            </div>
         </div>
     </nav>
 
-    <!-- Main Hero -->
-    <section class="pt-40 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="max-w-4xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 text-[11px] font-mono uppercase tracking-wider mb-6 text-neutral-800">
-                <span class="w-1.5 h-1.5 bg-neutral-900 rounded-full animate-ping"></span> Disrupting the Old Template
-            </div>
-            <h1 class="font-space text-5xl md:text-8xl font-bold tracking-tighter text-black leading-[0.92] mb-8">
-                BUILDING THE <br><span class="underline decoration-1 underline-offset-4 decoration-neutral-300">UNSTOPPABLE</span> ECOSYSTEM.
-            </h1>
-            <p class="text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed mb-10">
-                Rashtra Shaktibadi Party (রাষ্ট্র শক্তিবাদী পার্টি) represents the absolute fusion of digital-native efficiency, modern law, and deep national self-reliance.
-            </p>
-            <div class="flex flex-wrap items-center gap-4">
-                <a href="join.html" class="px-6 py-3.5 rounded-xl bg-black text-white text-sm font-semibold tracking-wide hover:bg-neutral-800 text-center">
-                    Claim Structural Membership
-                </a>
-                <a href="manifesto.html" class="px-6 py-3.5 rounded-xl bg-white border border-gray-200 text-black text-sm font-semibold hover:bg-gray-50 text-center">
-                    Read Manifesto 2026
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Header / Hero Section -->
+    <header class="pt-20 pb-16 px-6 text-center max-w-4xl mx-auto fade-in-section">
+        <h4 class="text-orange-600 font-black text-[10px] uppercase tracking-[0.4em] mb-4">Rashtra Shaktibadi Party</h4>
+        <h1 class="text-4xl md:text-7xl font-serif font-bold leading-tight tracking-tight mb-6 text-slate-900">
+            Empowering Citizens. <br>
+            <span class="italic text-blue-700 font-medium text-3xl md:text-6xl">Reshaping the Nation.</span>
+        </h1>
+        <div class="h-1 w-20 bg-blue-700 mx-auto rounded-full"></div>
+    </header>
 
-    <!-- Bento Grid Section -->
-    <section class="py-12 px-6 max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Core Grid Dashboard -->
+    <main class="max-w-5xl mx-auto px-5 pb-24 space-y-6">
+
+        <div class="grid md:grid-cols-3 gap-4">
             
-            <div class="bento-border p-8 rounded-2xl md:col-span-2 flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <span class="text-xs font-mono text-neutral-400 uppercase">01 / Core Directive</span>
-                    <h3 class="font-space text-2xl font-bold mt-4 mb-2">Structural Progressivism</h3>
-                    <p class="text-neutral-500 text-sm leading-relaxed max-w-xl">
-                        We don't do regular political noise. We align top legal research, structural parameters, and fast governance frameworks to drive sovereignty.
-                    </p>
+            <!-- Manifesto Card (White base with custom hover accent) -->
+            <a href="manifesto.html" class="party-card hover-manifesto p-8 rounded-3xl fade-in-section block" style="animation-delay: 0.1s;">
+                <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 text-orange-600 text-lg">
+                    <i class="fa-solid fa-scroll"></i>
                 </div>
-            </div>
+                <h3 class="text-lg font-black uppercase tracking-tighter mb-2 italic text-slate-900">01. Core Vision</h3>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">Explore our central principles, socio-economic agendas, and statutory vision designed for national restructuring.</p>
+                <span class="text-[10px] font-bold text-orange-600 tracking-widest uppercase inline-flex items-center gap-1">Read Manifesto <i class="fa-solid fa-arrow-right text-[8px]"></i></span>
+            </a>
 
-            <div class="bg-black text-white p-8 rounded-2xl flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <span class="text-xs font-mono text-neutral-500 uppercase">02 / Compliance</span>
-                    <h3 class="font-space text-2xl font-bold mt-4 mb-2 text-white">ECI Sovereign Guard</h3>
-                    <p class="text-neutral-400 text-sm leading-relaxed">
-                        Strict alignment with Section 29A of the Representation of the People Act, 1951. Built clean, tracked accurately.
-                    </p>
+            <!-- Roles Card (White base with custom hover accent) -->
+            <a href="roles.html" class="party-card hover-roles p-8 rounded-3xl fade-in-section block" style="animation-delay: 0.2s;">
+                <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600 text-lg">
+                    <i class="fa-solid fa-sitemap"></i>
                 </div>
-            </div>
+                <h3 class="text-lg font-black uppercase tracking-tighter mb-2 italic text-slate-900">02. Structure & Roles</h3>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">Detailed mapping of our executive committees, volunteer assignments, and institutional leadership roles.</p>
+                <span class="text-[10px] font-bold text-blue-600 tracking-widest uppercase inline-flex items-center gap-1">View Hierarchy <i class="fa-solid fa-arrow-right text-[8px]"></i></span>
+            </a>
 
-            <div class="bento-border p-8 rounded-2xl flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <span class="text-xs font-mono text-neutral-400 uppercase">03 / Ideology</span>
-                    <h3 class="font-space text-xl font-bold mt-4 mb-2">Sovereign Corridors</h3>
-                    <p class="text-neutral-500 text-xs leading-relaxed">
-                        Empowering digital architectures, creator frameworks, and strategic operational nodes.
-                    </p>
+            <!-- Rules Card (White base with custom hover accent) -->
+            <a href="rules.html" class="party-card hover-rules p-8 rounded-3xl fade-in-section block" style="animation-delay: 0.3s;">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600 text-lg">
+                    <i class="fa-solid fa-scale-balanced"></i>
                 </div>
-                <a href="roles.html" class="text-xs font-semibold underline mt-4 inline-block">Explore open squads →</a>
-            </div>
-
-            <div class="bento-border p-8 rounded-2xl md:col-span-2 flex flex-col justify-between min-h-[220px]">
-                <div>
-                    <span class="text-xs font-mono text-neutral-400 uppercase">04 / ভিশন</span>
-                    <h3 class="font-space text-2xl font-bold mt-4 mb-2">আত্মনির্ভরশীল রাষ্ট্র ও প্রগতি</h3>
-                    <p class="text-neutral-500 text-sm leading-relaxed">
-                        একটি শক্তিশালী, প্রগতিশীল ও আত্মনির্ভরশীল রাষ্ট্র গড়ার আন্দোলনে শামিল হোন। ভারতের নির্বাচন কমিশনের নির্দেশিকা মেনেই আমাদের প্রত্যেক সদস্যপদ নিবন্ধিত হয়।
-                    </p>
-                </div>
-            </div>
+                <h3 class="text-lg font-black uppercase tracking-tighter mb-2 italic text-slate-900">03. Code & Rules</h3>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">The structural constitution, compliance metrics, and mandatory code of conduct binding all active members.</p>
+                <span class="text-[10px] font-bold text-teal-600 tracking-widest uppercase inline-flex items-center gap-1">Read Rules <i class="fa-solid fa-arrow-right text-[8px]"></i></span>
+            </a>
 
         </div>
-    </section>
+
+        <!-- Official Support & Dynamic Highlight Sections -->
+        <section class="grid md:grid-cols-3 gap-4 pt-4">
+            
+            <!-- Communications Box (White base, Clean Borders) -->
+            <div class="party-card p-6 rounded-2xl md:col-span-2 flex flex-col justify-between fade-in-section" style="animation-delay: 0.4s;">
+                <div>
+                    <h4 class="text-blue-600 font-black text-[9px] uppercase tracking-widest mb-2">Institutional Support</h4>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight mb-2">Official Communications Desk</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">For legal inquiries, press briefings, framework alliances, or policy reviews, address your correspondence directly to our structural registry gateway.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-mono font-bold text-slate-800">info@rashtrashaktibadiparty.in</span>
+                    <a href="mailto:info@rashtrashaktibadiparty.in" class="p-2.5 bg-blue-50 hover:bg-blue-600 hover:text-white rounded-xl transition text-blue-700">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Join CTA Box (Deep Navy Blue Base for ultimate Contrast against White Cards) -->
+            <div class="party-card p-6 rounded-2xl bg-blue-900 text-white flex flex-col justify-between border-none fade-in-section" style="animation-delay: 0.5s;">
+                <div>
+                    <h4 class="text-orange-400 font-black text-[9px] uppercase tracking-widest mb-2">Grassroots Drive</h4>
+                    <h3 class="text-xl font-bold text-white tracking-tight mb-2">Become an Asset</h3>
+                    <p class="text-blue-100/70 text-xs leading-relaxed">Register inside our systematic ledger to claim designated operational ground duties across your region.</p>
+                </div>
+                <!-- Custom High-Contrast Button (Saffron Orange background) -->
+                <a href="join.html" class="mt-6 w-full bg-orange-600 text-white font-black text-center py-3 rounded-xl text-xs hover:bg-white hover:text-blue-900 transition-all tracking-wider uppercase shadow-md">
+                    Launch Membership Form
+                </a>
+            </div>
+
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-100 bg-white py-12 px-6 mt-20">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-400 font-medium">
-            <div>&copy; 2026 Rashtra Shaktibadi Party. Core Ecosystem Node.</div>
-            <div class="flex gap-6 tracking-tight uppercase text-[10px] font-mono">
-                <a href="manifesto.html" class="hover:text-black">Manifesto</a>
-                <a href="roles.html" class="hover:text-black">Squads</a>
-                <a href="rules.html" class="hover:text-black">ECI</a>
-            </div>
+    <footer class="py-10 px-6 text-center border-t border-slate-100 bg-white">
+        <div class="flex justify-center gap-6 mb-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
+            <a href="manifesto.html" class="hover:text-orange-600 transition">Manifesto</a>
+            <a href="roles.html" class="hover:text-blue-600 transition">Structure</a>
+            <a href="rules.html" class="hover:text-teal-600 transition">Rules</a>
         </div>
+        <p class="text-[9px] font-black text-slate-300 uppercase tracking-[0.2em]">© 2026 RASHTRASHAKTIBADIPARTY.IN • ALL RIGHTS RESERVED</p>
     </footer>
 
 </body>
