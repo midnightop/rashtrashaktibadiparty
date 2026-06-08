@@ -2,49 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECI Rules | RSP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Party Rules | Rashtra Shaktibadi Party</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700;800;900&family=Merriweather:wght=700;900&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; color: #1e293b; }
+        .font-hindi-heading { font-family: 'Merriweather', serif; }
+        .party-card-solid { background: #ffffff; border: 2px solid #0f172a; box-shadow: 4px 4px 0px #0f172a; }
+    </style>
 </head>
-<body class="bg-[#fafafa] text-[#111111]">
+<body class="selection:bg-orange-500 selection:text-white pt-16">
 
-    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-space font-bold text-lg tracking-tight flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-black rounded-full"></span> RSP
-            </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="index.html" class="text-gray-500 hover:text-black">Home</a>
-                <a href="manifesto.html" class="text-gray-500 hover:text-black">Manifesto</a>
-                <a href="roles.html" class="text-gray-500 hover:text-black">Squads</a>
-                <a href="rules.html" class="text-black font-semibold">ECI</a>
+    <!-- Top Accent Line -->
+    <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-[100]">
+        <div class="bg-orange-500"></div><div class="bg-white"></div><div class="bg-green-600"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
+        <a href="index.html" class="flex items-center gap-2">
+            <div class="w-9 h-9 bg-orange-500 text-white flex items-center justify-center rounded-xl font-black text-lg border border-slate-900">R</div>
+            <div>
+                <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
+                <span class="text-[9px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
             </div>
-            <a href="join.html" class="text-xs font-semibold px-4 py-2 rounded-xl bg-black text-white">Join</a>
+        </a>
+        <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <a href="manifesto.html" class="hover:text-orange-600 transition-colors">Our Manifesto</a>
+            <a href="roles.html" class="hover:text-orange-600 transition-colors">Leadership Roles</a>
+            <a href="rules.html" class="text-orange-600">Party Rules</a>
         </div>
+        <a href="join.html" class="bg-orange-500 text-white text-[10px] md:text-xs font-black py-2 px-4 rounded-lg border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a]">Join / जुड़ें</a>
     </nav>
 
-    <main class="pt-36 pb-24 px-6 max-w-3xl mx-auto">
-        <div class="mb-10">
-            <span class="text-xs font-mono tracking-widest text-neutral-400 uppercase">Legal Alignment</span>
-            <h1 class="font-space text-4xl font-bold tracking-tight text-black mt-1">Constitutional Rules & Directives</h1>
+    <!-- Header -->
+    <header class="bg-white pt-16 pb-10 px-4 border-b-2 border-slate-900 text-center">
+        <h1 class="font-hindi-heading text-4xl md:text-6xl font-black text-slate-900 mb-4">अनुशासन एवं नियमावली <br><span class="text-green-600">Code of Rules</span></h1>
+        <p class="text-xs md:text-base font-semibold text-slate-600 max-w-xl mx-auto">Non-negotiable guidelines binding every registered volunteer and senior cadre administrator.</p>
+    </header>
+
+    <!-- Rules Mandate -->
+    <main class="max-w-3xl mx-auto px-4 py-12 space-y-6">
+        
+        <div class="party-card-solid p-6 rounded-xl flex gap-4 items-start" data-aos="fade-up">
+            <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-black text-sm flex-shrink-0">01</div>
+            <div>
+                <h4 class="font-bold text-slate-900 uppercase text-sm mb-1">Financial Cleanliness Protocol</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">Every structural allocation or collection must balance inside our transparent decentralized portal. Unvouched monetary transactions mean instant removal.</p>
+            </div>
         </div>
 
-        <div class="bg-white border border-neutral-200/60 rounded-2xl p-8 space-y-6 text-xs md:text-sm text-neutral-600 leading-relaxed font-normal">
+        <div class="party-card-solid p-6 rounded-xl flex gap-4 items-start" data-aos="fade-up">
+            <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-black text-sm flex-shrink-0">02</div>
             <div>
-                <h3 class="font-space text-base font-bold text-black mb-1">1. Statutory ECI Compliance Mandate</h3>
-                <p>
-                    RSP maintains absolute operational discipline under Section 29A of the Representation of the People Act, 1951. Members are strictly filtered using valid electoral database confirmation streams.
-                </p>
-            </div>
-            <div class="border-t border-neutral-100 pt-5">
-                <h3 class="font-space text-base font-bold text-black mb-1">2. Complete Encrypted Privacy Isolation</h3>
-                <p>
-                    Voter IDs and localized residential coordinates are isolated in air-gapped system segments. No third-party data access hooks are built into our architecture.
-                </p>
+                <h4 class="font-bold text-slate-900 uppercase text-sm mb-1">Zero Communal Provocation</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">Political strategy or dynamic speeches must remain targeted purely on administrative frameworks, growth parameters, and public balance. Hate speech is instantly prohibited.</p>
             </div>
         </div>
+
+        <div class="party-card-solid p-6 rounded-xl flex gap-4 items-start" data-aos="fade-up">
+            <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-black text-sm flex-shrink-0">03</div>
+            <div>
+                <h4 class="font-bold text-slate-900 uppercase text-sm mb-1">Command Sync Guidelines</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">District or ground coordinators cannot broadcast individual official positions or issue legal press statements without clear written verification from the central desk.</p>
+            </div>
+        </div>
+
     </main>
 
+    <footer class="py-8 border-t-2 border-slate-900 bg-slate-50 text-center text-[10px] font-black text-slate-400 tracking-wider uppercase">
+        © 2026 RASHTRASHAKTIBADIPARTY.IN • NEW DELHI HQ
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 700 });</script>
 </body>
 </html>
