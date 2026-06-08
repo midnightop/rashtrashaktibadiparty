@@ -1,439 +1,55 @@
-/* ==========================================
-   RASHTRA SHAKTIBADI PARTY — GEN Z TECH-MINIMALISM (PREMIUM COLOR EDITION)
-   ========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --saffron: #FF6B00;       /* Cyber Saffron (High-Contrast Electric) */
-  --saffron-glow: #FF9E53;  /* Soft Gradient Accent */
-  --white: #FFFFFF;
-  --green: #00E676;         /* Hyper Emerald Green */
-  --bg-dark: #0A0D1A;       /* Deep Cosmic Velvet (Premium Navy-Black) */
-  --card-bg: #13182C;       /* Glassmorphic Bento Card Base */
-  --border: #1E2543;         /* Sleek Dark Tech Border */
-  --text-main: #F1F5F9;     /* Ultra Crisp Ice-White */
-  --text-muted: #64748B;    /* Clean Muted Slate */
-  --glow-saffron: rgba(255, 107, 0, 0.2);
-}
-
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  -webkit-font-smoothing: antialiased;
+    --font-space: 'Space Grotesk', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
-  background: var(--bg-dark);
-  color: var(--text-main);
-  font-size: 16px;
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: var(--font-sans);
+    background-color: #fafafa;
+    color: #111111;
+    overflow-x: hidden;
 }
 
-/* ===== HIGH-TECH TRICOLOR HEADER LINE ===== */
-.tricolor-bar {
-  display: flex;
-  height: 4px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
-.tricolor-bar span { flex: 1; }
-.tricolor-bar .s { background: var(--saffron); box-shadow: 0 4px 15px rgba(255, 107, 0, 0.6); }
-.tricolor-bar .w { background: var(--white); }
-.tricolor-bar .g { background: var(--green); box-shadow: 0 4px 15px rgba(0, 230, 118, 0.6); }
-
-/* ===== PREMIUM BRAND BAR ===== */
-header {
-  background: rgba(10, 13, 26, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 24px;
-  margin-top: 4px;
+.font-space {
+    font-family: var(--font-space);
 }
 
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Gen Z Border Accent Lines */
+.bento-border {
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.logo-placeholder {
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(255, 107, 0, 0.4);
-  background: rgba(255, 107, 0, 0.05);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--saffron-glow);
-  letter-spacing: 0.5px;
-  box-shadow: inset 0 0 10px rgba(255, 107, 0, 0.1);
+.bento-border:hover {
+    border-color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.02);
 }
 
-.party-name h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: -0.5px;
+/* Micro-interactions */
+a, button, input, select {
+    transition: all 0.2s ease;
 }
 
-.party-name p {
-  font-size: 0.8rem;
-  color: var(--saffron-glow);
-  font-weight: 600;
-  margin-top: -2px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+input:focus {
+    box-shadow: 0 0 0 2px #111111;
 }
 
-/* ===== APP-STYLE STICKY NAVIGATION ===== */
-nav {
-  background: rgba(10, 13, 26, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 4px;
-  z-index: 900;
+/* Custom Hide Scrollbar for clean looks */
+::-webkit-scrollbar {
+    width: 6px;
 }
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 6px;
-  padding: 6px 24px;
+::-webkit-scrollbar-track {
+    background: #fafafa;
 }
-
-nav a {
-  color: #94A3B8;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 12px 18px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 10px;
+::-webkit-scrollbar-thumb {
+    background: #e5e5e5;
+    border-radius: 10px;
 }
-
-nav a:hover {
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-nav a.active {
-  color: var(--white);
-  background: var(--saffron);
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.25);
-}
-
-/* ===== MINIMAL ANNOUNCEMENT ticker ===== */
-.announcement {
-  background: linear-gradient(90deg, rgba(255,107,0,0.08) 0%, rgba(0,230,118,0.08) 100%);
-  border-bottom: 1px solid var(--border);
-  color: #CBD5E1;
-  text-align: center;
-  padding: 10px 24px;
-  font-weight: 500;
-  font-size: 0.85rem;
-  letter-spacing: 0.3px;
-}
-
-/* ===== CYBER HERO SECTION ===== */
-.hero {
-  padding: 140px 24px;
-  text-align: center;
-  background: radial-gradient(circle at 50% 35%, rgba(255, 107, 0, 0.08), transparent 55%),
-              radial-gradient(circle at 20% 70%, rgba(0, 230, 118, 0.03), transparent 40%);
-}
-
-.hero h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 4.2rem;
-  font-weight: 700;
-  letter-spacing: -2px;
-  line-height: 1.05;
-  margin-bottom: 24px;
-  color: var(--white);
-}
-
-.hero h2 span {
-  background: linear-gradient(135deg, #FF6B00 0%, #FFA800 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #94A3B8;
-  max-width: 660px;
-  margin: 0 auto 40px;
-  font-weight: 400;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-}
-
-/* ===== GEN Z LIQUID BUTTONS ===== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 32px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border-radius: 12px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-saffron {
-  background: linear-gradient(135deg, #FF6B00 0%, #FF8800 100%);
-  color: var(--white);
-  box-shadow: 0 4px 25px rgba(255, 107, 0, 0.35);
-}
-.btn-saffron:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.5);
-}
-
-.btn-outline {
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--white);
-  border: 1px solid var(--border);
-}
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.btn-green {
-  background: linear-gradient(135deg, #00E676 0%, #00B0FF 100%); /* Neon Emerald-Teal Fusion */
-  color: var(--bg-dark);
-  font-weight: 700;
-  box-shadow: 0 4px 25px rgba(0, 230, 118, 0.3);
-}
-.btn-green:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 230, 118, 0.45);
-}
-
-/* ===== SECTIONS & BENTO BOX GRID ===== */
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 24px;
-}
-
-.section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -1px;
-  color: var(--white);
-  margin-bottom: 45px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-}
-
-/* Bento Box Style Grid Card */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 36px;
-  border-radius: 20px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.card:hover {
-  border-color: rgba(255, 107, 0, 0.35);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(180deg, var(--card-bg) 0%, #171E37 100%);
-}
-
-.card h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: #94A3B8;
-  font-size: 0.95rem;
-}
-
-/* ===== ULTRA CLEAN TECH TABLES ===== */
-.roles-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.roles-table th {
-  background: rgba(255, 255, 255, 0.03);
-  border-bottom: 1px solid var(--border);
-  color: #94A3B8;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  padding: 20px 24px;
-  text-align: left;
-}
-
-.roles-table td {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--border);
-  color: #E2E8F0;
-  font-size: 0.95rem;
-}
-
-.roles-table tr:last-child td { border-bottom: none; }
-.roles-table tr:hover td { background: rgba(255, 255, 255, 0.02); }
-
-.role-badge {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 0.75rem;
-  padding: 5px 12px;
-  border-radius: 8px;
-  background: rgba(255, 107, 0, 0.12);
-  color: var(--saffron-glow);
-}
-.role-badge.exec { background: rgba(0, 230, 118, 0.12); color: var(--green); }
-.role-badge.member { background: rgba(255, 255, 255, 0.06); color: var(--white); }
-
-/* ===== TECH LIST ITEMS (RULES) ===== */
-.rule-item {
-  display: flex;
-  gap: 20px;
-  padding: 26px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  margin-bottom: 14px;
-  transition: border 0.2s ease;
-}
-.rule-item:hover {
-  border-color: rgba(0, 230, 118, 0.3);
-}
-
-.rule-num {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--saffron-glow);
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  min-width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.rule-item h4 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 6px;
-}
-
-/* ===== MANIFESTO LABS ===== */
-.manifesto-placeholder {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 80px 24px;
-  text-align: center;
-}
-
-/* ===== GRADIENT JOIN BANNER ===== */
-.join-hero {
-  background: radial-gradient(circle at top left, #122525, var(--bg-dark) 80%);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 90px 24px;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.join-hero h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 3.2rem;
-  font-weight: 700;
-  letter-spacing: -1.5px;
-  color: var(--white);
-}
-
-/* ===== SUBTLE FOOTER ===== */
-footer {
-  border-top: 1px solid var(--border);
-  background: #060811;
-  color: #475569;
-  text-align: center;
-  padding: 60px 24px;
-  margin-top: 120px;
-  font-size: 0.9rem;
-}
-
-footer strong { color: var(--white); }
-footer a { color: var(--saffron-glow); text-decoration: none; font-weight: 600; }
-footer a:hover { text-decoration: underline; }
-
-/* ===== ULTIMATE MOBILE BREAKPOINTS ===== */
-@media (max-width: 768px) {
-  header { padding: 16px; }
-  .header-inner { flex-direction: column; gap: 12px; text-align: center; }
-  .header-inner > div { text-align: center !important; }
-  
-  .nav-inner {
-    padding: 6px 8px;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-  nav a { padding: 10px 14px; font-size: 0.85rem; }
-  
-  .hero { padding: 90px 16px; }
-  .hero h2 { font-size: 3rem; letter-spacing: -1px; }
-  .hero p { font-size: 1.1rem; }
-  
-  .hero-btns { flex-direction: column; width: 100%; max-width: 280px; margin: 0 auto; }
-  .btn { width: 100%; }
-  
-  .section { padding: 60px 16px; }
-  .section-title { font-size: 2.1rem; }
-  
-  .roles-table { display: block; overflow-x: auto; }
-  .rule-item { flex-direction: column; gap: 12px; }
+::-webkit-scrollbar-thumb:hover {
+    background: #111111;
 }
