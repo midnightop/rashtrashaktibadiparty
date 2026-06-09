@@ -32,7 +32,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700;800;900&family=Merriweather:wght=700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Merriweather:wght@700;900&display=swap');
         
         body { 
             font-family: 'Poppins', sans-serif; 
@@ -63,7 +63,8 @@
     <!-- Main Navigation Bar -->
     <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
         <a href="index.html" class="flex items-center gap-2 md:gap-3">
-           <img src="logo.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-xl object-cover flex-shrink-0 shadow-md">
+           <!-- Updated Logo Path to banner.png -->
+           <img src="banner.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-full object-cover flex-shrink-0 shadow-md">
             <div>
                 <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
                 <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
@@ -71,6 +72,8 @@
         </a>
         
         <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <!-- Included About Us navigation alignment -->
+            <a href="about.html" class="hover:text-orange-600 transition-colors">About Us / Our Story</a>
             <a href="manifesto.html" class="hover:text-orange-600 transition-colors">Our Manifesto</a>
             <a href="roles.html" class="hover:text-orange-600 transition-colors">Leadership Roles</a>
             <a href="rules.html" class="hover:text-orange-600 transition-colors">Party Rules</a>
@@ -83,17 +86,25 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="relative bg-white pt-16 pb-10 px-4 border-b-2 border-slate-900 text-center">
-        <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-            <span class="inline-block bg-slate-900 text-white text-[9px] md:text-[10px] font-black tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-4 border border-orange-500">
+    <!-- Header Section (Top Gap completely eliminated via compressed padding and layout shifting fix) -->
+    <header class="relative bg-white pt-6 md:pt-12 pb-6 px-4 border-b-2 border-slate-900 text-center -mt-2">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block bg-slate-900 text-white text-[9px] md:text-[10px] font-black tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-3 border border-orange-500">
                 Member Registration
             </span>
-            <h1 class="font-hindi-heading text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-3">
+            <h1 class="font-hindi-heading text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-4">
                  Rashtra Shaktibadi Party <br>
                 <span class="text-orange-500">Join the Mission</span>
             </h1>
-            <p class="text-xs md:text-sm font-semibold text-slate-600 max-w-xl mx-auto leading-relaxed">
+
+            <!-- Stable Logo placement exactly between heading and description as configured -->
+            <div class="flex justify-center mb-5">
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-white border-2 border-slate-900 rounded-full shadow-[4px_4px_0px_#0f172a] flex items-center justify-center overflow-hidden">
+                    <img src="banner.png" alt="RSP Banner Logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <p class="text-xs md:text-sm font-semibold text-slate-600 max-w-xl mx-auto leading-relaxed px-2">
                 Enlist in the decentralized operational ecosystem. Follow the verification steps below to activate your registration.
             </p>
         </div>
