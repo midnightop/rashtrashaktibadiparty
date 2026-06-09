@@ -86,7 +86,7 @@
     <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
         <div class="flex items-center gap-2 md:gap-3">
           <!-- Logo Source banner.png -->
-          <img src="logo.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-full object-cover flex-shrink-0 shadow-md">
+          <img src="banner.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-full object-cover flex-shrink-0 shadow-md">
             <div>
                 <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
                 <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
@@ -134,7 +134,7 @@
         </div>
     </div>
 
-    <!-- Heavy Political Hero Section (Top Gap completely eliminated via compressed pt padding and negative margins) -->
+    <!-- Heavy Political Hero Section -->
     <header class="relative bg-white pt-6 md:pt-12 pb-4 px-4 border-b-2 border-slate-900 overflow-hidden -mt-2">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <span class="inline-block bg-slate-900 text-white text-[9px] md:text-[10px] font-black tracking-[0.25em] md:tracking-[0.3em] uppercase px-3 py-1 md:py-1.5 rounded-full mb-3 md:mb-5 border border-orange-500">
@@ -176,7 +176,7 @@
         </div>
     </header>
 
-    <!-- Core Pillars Grid (Gap Squeezed: Changed pt-6 to pt-4) -->
+    <!-- Core Pillars Grid -->
     <main class="max-w-6xl mx-auto px-4 pt-4 pb-12 md:pt-10 md:pb-16 space-y-12 md:space-y-20">
         
         <div class="text-center" data-aos="fade-up">
@@ -318,19 +318,24 @@
                 <p class="text-slate-500 text-xs max-w-sm mt-1">Stay updated with official bulletins, dynamic directives, and community updates straight from headquarters.</p>
             </div>
 
+            <!-- Modified Social Media Links Layout (Instagram Active, Others Locked) -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto px-2">
-                <a href="https://x.com/yourhandle" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
-                    <i class="fa-brands fa-x-twitter text-sm"></i> Twitter/X
-                </a>
-                <a href="https://facebook.com/yourpage" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
-                    <i class="fa-brands fa-facebook text-sm text-blue-600"></i> Facebook
-                </a>
-                <a href="https://instagram.com/rashtrashaktibadiparty" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
+                <!-- Twitter/X Lock -->
+                <div class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-400 bg-slate-50 select-none cursor-not-allowed border-slate-300 shadow-[4px_4px_0px_#cbd5e1]">
+                    <i class="fa-brands fa-x-twitter text-sm text-slate-400"></i> X (Soon)
+                </div>
+                <!-- Facebook Lock -->
+                <div class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-400 bg-slate-50 select-none cursor-not-allowed border-slate-300 shadow-[4px_4px_0px_#cbd5e1]">
+                    <i class="fa-brands fa-facebook text-sm text-slate-400"></i> FB (Soon)
+                </div>
+                <!-- Instagram ACTIVE -->
+                <a href="https://instagram.com/rashtrashaktibadiparty" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900 border-slate-900 shadow-[4px_4px_0px_#ea580c] transition-all hover:bg-pink-50">
                     <i class="fa-brands fa-instagram text-sm text-pink-600"></i> Instagram
                 </a>
-                <a href="https://youtube.com/yourchannel" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
-                    <i class="fa-brands fa-youtube text-sm text-red-600"></i> YouTube
-                </a>
+                <!-- YouTube Lock -->
+                <div class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-400 bg-slate-50 select-none cursor-not-allowed border-slate-300 shadow-[4px_4px_0px_#cbd5e1]">
+                    <i class="fa-brands fa-youtube text-sm text-slate-400"></i> YT (Soon)
+                </div>
             </div>
         </section>
 
