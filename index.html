@@ -85,7 +85,7 @@
     <!-- Main Navigation Bar (Fully Mobile Responsive Layout) -->
     <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
         <div class="flex items-center gap-2 md:gap-3">
-          <!-- Updated Logo Source to banner.png -->
+          <!-- Logo Source banner.png -->
           <img src="banner.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-full object-cover flex-shrink-0 shadow-md">
             <div>
                 <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
@@ -147,9 +147,9 @@
                 Building a disciplined, transparent, and powerful nation-first ecosystem. Explore our core values, structural directives, and official vision.
             </p>
 
-            <!-- ADDED: Official Banner Logo between description and buttons -->
+            <!-- Increased logo size wrapper here (w-32 h-32 on mobile, w-40 h-40 on desktop) -->
             <div class="flex justify-center mb-8">
-                <div class="w-20 h-20 md:w-24 md:h-24 bg-white border-2 border-slate-900 rounded-full shadow-[3px_3px_0px_#0f172a] flex items-center justify-center overflow-hidden">
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-white border-2 border-slate-900 rounded-full shadow-[4px_4px_0px_#0f172a] flex items-center justify-center overflow-hidden">
                     <img src="banner.png" alt="RSP Banner Logo" class="w-full h-full object-cover">
                 </div>
             </div>
@@ -180,7 +180,7 @@
                     <div class="w-11 h-11 bg-orange-100 text-orange-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
                         <i class="fa-solid fa-bullhorn"></i>
                     </div>
-                    h3 class="text-lg md:text-xl font-extrabold uppercase tracking-tight text-slate-900 mb-1.5">01. Party Manifesto</h3>
+                    <h3 class="text-lg md:text-xl font-extrabold uppercase tracking-tight text-slate-900 mb-1.5">01. Party Manifesto</h3>
                     <p class="text-slate-500 text-xs leading-relaxed mb-5">Our calculated vision document for administrative overhauls, youth development, and systemic socio-economic progress.</p>
                 </div>
                 <a href="manifesto.html" class="w-full bg-slate-900 text-white text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-orange-500 border border-slate-900 transition-colors block">
@@ -217,7 +217,7 @@
             </div>
         </div>
 
-        <!-- NEW: Dedicated Team / Leadership Section (Highly Mobile Scaled) -->
+        <!-- NEW: Dedicated Team / Leadership Section -->
         <section class="space-y-10 pt-6">
             <div class="text-center" data-aos="fade-up">
                 <h2 class="text-xl md:text-3xl font-extrabold uppercase tracking-tight text-slate-900">National Leadership Team</h2>
@@ -297,10 +297,9 @@
             </div>
         </section>
 
-        <!-- NEW: Official Logo & Social Connect Gateway (Brutalism Grid For Deep Mobile Scroll) -->
+        <!-- Official Logo & Social Connect Gateway -->
         <section class="space-y-8 pt-8 border-t-2 border-dashed border-slate-200" data-aos="fade-up">
             <div class="flex flex-col items-center justify-center text-center">
-                <!-- Bottom Logo Container -->
                 <div class="w-20 h-20 bg-white border-2 border-slate-900 rounded-full shadow-[3px_3px_0px_#0f172a] flex items-center justify-center overflow-hidden mb-4">
                     <img src="banner.png" alt="RSP Official Logo" class="w-full h-full object-cover">
                 </div>
@@ -347,28 +346,24 @@
     <script>
         // Initialize Animations
         AOS.init({
-            once: true, // Animation repeats off to save mobile battery
+            once: true,
             duration: 700
         });
 
-        // Smart & Clean Mobile Navbar Controls
+        // Mobile Navbar Controls
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const drawer = mobileMenu.querySelector('div');
 
-
-
-                // Copy-Paste and Right-Click Protection
-        document.addEventListener('contextmenu', event => event.preventDefault()); // Right-click block
-        document.addEventListener('copy', event => event.preventDefault());        // Copy shortcut block
-        document.addEventListener('cut', event => event.preventDefault());         // Cut block
+        // Protection Scripts
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('copy', event => event.preventDefault());
+        document.addEventListener('cut', event => event.preventDefault());
         
-        // Mobile text selection protection key
         document.body.style.webkitUserSelect = "none";
         document.body.style.userSelect = "none";
 
-        
         function openMenu() {
             mobileMenu.classList.remove('hidden');
             setTimeout(() => {
