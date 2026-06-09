@@ -1,30 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta -->
+<meta name="description" content="Rashtra Shaktibadi Party (RSP) — Building a disciplined, transparent, and nation-first ecosystem. Read our manifesto, leadership structure, and party rules.">
+<meta name="keywords" content="Rashtra Shaktibadi Party, RSP, Indian political party, manifesto, national sovereignty">
+<meta name="author" content="Rashtra Shaktibadi Party">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn preview) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rashtrashaktibadiparty.in/">
+<meta property="og:title" content="Rashtra Shaktibadi Party (RSP) | Official Website">
+<meta property="og:description" content="Nation-first political platform. Explore our manifesto, executive roles, and constitutional rules.">
+<meta property="og:image" content="https://rashtrashaktibadiparty.in/banner.png">
+<meta property="og:site_name" content="Rashtra Shaktibadi Party">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rashtra Shaktibadi Party (RSP) | Official Website">
+<meta name="twitter:description" content="Nation-first political platform. Explore our manifesto, executive roles, and constitutional rules.">
+<meta name="twitter:image" content="https://rashtrashaktibadiparty.in/banner.png">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://rashtrashaktibadiparty.in/">
+
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>About Us | Our Story - Rashtra Shaktibadi Party (RSP)</title>
+    <title>Rashtra Shaktibadi Party (RSP) | Official Website</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Merriweather:wght@700;900&display=swap');
+        
         body { 
             font-family: 'Poppins', sans-serif; 
             background-color: #ffffff; 
             color: #1e293b;
             overflow-x: hidden;
+            touch-action: pan-x pan-y;
         }
         .font-hindi-heading { font-family: 'Merriweather', serif; }
-        .brutal-card {
+        
+        /* Brutalism Style Party Cards */
+        .party-card-solid {
             background: #ffffff;
             border: 2px solid #0f172a;
             box-shadow: 4px 4px 0px #0f172a;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Mobile updates - active states instead of hover for better touch feel */
+        @media (max-width: 767px) {
+            .party-card-solid:active {
+                transform: translate(2px, 2px);
+                box-shadow: 1px 1px 0px #0f172a;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .party-card-solid:hover {
+                transform: translate(-4px, -4px);
+                box-shadow: 8px 8px 0px #ea580c;
+                border-color: #ea580c;
+            }
         }
     </style>
 </head>
-<body class="selection:bg-orange-500 selection:text-white pt-20">
+<body class="selection:bg-orange-500 selection:text-white pt-16">
 
     <!-- Top Tiranga Accent Line -->
     <div class="h-1.5 w-full grid grid-cols-3 fixed top-0 z-[100]">
@@ -33,191 +82,310 @@
         <div class="bg-green-600"></div>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Main Navigation Bar (Fully Mobile Responsive Layout) -->
     <nav class="fixed top-1.5 left-0 right-0 z-50 bg-white/95 border-b-2 border-slate-900 px-4 py-3 md:px-12 flex justify-between items-center backdrop-blur">
         <div class="flex items-center gap-2 md:gap-3">
-            <img src="banner.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-full object-cover flex-shrink-0 shadow-md">
+          <!-- Logo Source banner.png -->
+          <img src="logo.png" alt="RSP Logo" class="w-9 h-9 md:w-10 md:h-10 border-2 border-slate-900 rounded-full object-cover flex-shrink-0 shadow-md">
             <div>
                 <span class="font-black text-sm md:text-lg tracking-tight uppercase block leading-none text-slate-900">Rashtra Shaktibadi</span>
                 <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-orange-600 uppercase">Party (RSP)</span>
             </div>
         </div>
-        <div>
-            <a href="index.html" class="bg-slate-900 text-white text-[10px] md:text-xs font-black py-2 px-4 rounded-lg border-2 border-slate-900 shadow-[3px_3px_0px_#ea580c] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all uppercase tracking-wider">
-                ← Home
+        
+        <!-- Laptop/Desktop Links -->
+        <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <a href="about.html" class="hover:text-orange-600 transition-colors text-orange-600">About Us / Our Story</a>
+            <a href="manifesto.html" class="hover:text-orange-600 transition-colors">Our Manifesto</a>
+            <a href="roles.html" class="hover:text-orange-600 transition-colors">Leadership Roles</a>
+            <a href="rules.html" class="hover:text-orange-600 transition-colors">Party Rules</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <a href="join.html" class="bg-orange-500 text-white text-[10px] md:text-xs font-black py-2 md:py-2.5 px-4 md:px-6 rounded-lg border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all uppercase tracking-wider">
+            JOIN
             </a>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-slate-900 p-2 focus:outline-none focus:bg-slate-100 rounded-lg">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Header Block -->
-    <header class="bg-white pt-8 pb-4 px-4 text-center border-b-2 border-slate-900">
-        <div class="max-w-3xl mx-auto">
-            <span class="inline-block bg-slate-900 text-white text-[9px] md:text-[10px] font-black tracking-[0.2em] uppercase px-3 py-1 rounded-full mb-3 border border-orange-500">
-                Official Genesis Document
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900/40 z-40 hidden backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="fixed right-0 top-0 bottom-0 w-[75%] max-w-xs bg-white border-l-2 border-slate-900 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                    <span class="font-black text-xs uppercase tracking-widest text-slate-400">Navigation</span>
+                    <button id="close-btn" class="text-slate-900 p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+                <div class="flex flex-col gap-4 text-sm font-bold uppercase tracking-wide text-slate-800">
+                    <a href="about.html" class="py-2 text-orange-600 border-b border-slate-50">About Us / Our Story</a>
+                    <a href="manifesto.html" class="py-2 hover:text-orange-600 border-b border-slate-50">Our Manifesto</a>
+                    <a href="roles.html" class="py-2 hover:text-orange-600 border-b border-slate-50">Leadership Roles</a>
+                    <a href="rules.html" class="py-2 hover:text-orange-600 border-b border-slate-50">Party Rules</a>
+                </div>
+            </div>
+            <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider text-center">
+                Rashtra Shaktibadi Party
+            </div>
+        </div>
+    </div>
+
+    <!-- Heavy Political Hero Section (Clean Top Spacing Layout) -->
+    <header class="relative bg-white pt-6 md:pt-12 pb-4 px-4 border-b-2 border-slate-900 overflow-hidden -mt-2">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-slate-900 text-white text-[9px] md:text-[10px] font-black tracking-[0.25em] md:tracking-[0.3em] uppercase px-3 py-1 md:py-1.5 rounded-full mb-3 md:mb-5 border border-orange-500">
+                Rashtra Shaktibadi Party
             </span>
-            <h1 class="font-hindi-heading text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-2">
-                Our Story & Ideological Core
+            <h1 class="font-hindi-heading text-4xl md:text-7xl font-black tracking-tight text-slate-900 leading-tight mb-3 md:mb-5">
+                National Sovereignty <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-slate-800 to-green-600">is Supreme</span>
             </h1>
-            <p class="text-xs md:text-sm font-semibold text-slate-500 uppercase tracking-wider">
-                Founded: June 8, 2026 • Origin: Kolkata, West Bengal
+            <p class="text-xs md:text-base font-semibold text-slate-600 max-w-xl mx-auto mb-5 leading-relaxed px-2">
+                Building a disciplined, transparent, and powerful nation-first ecosystem. Explore our core values, structural directives, and official vision.
             </p>
+
+            <!-- Stable Bigger Logo Configuration Only (No Counters or Live Blocks) -->
+            <div class="flex justify-center mb-8">
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-white border-2 border-slate-900 rounded-full shadow-[4px_4px_0px_#0f172a] flex items-center justify-center overflow-hidden">
+                    <img src="banner.png" alt="RSP Banner Logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Buttons expand to edge-to-edge layout -->
+            <div class="flex flex-col gap-3 w-full max-w-md mx-auto px-1">
+                <a href="manifesto.html" class="w-full bg-slate-900 text-white text-xs font-bold py-4 px-6 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] text-center uppercase tracking-wider active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
+                    Read Core Agenda
+                </a>
+                <a href="about.html" class="w-full bg-white text-slate-900 text-xs font-bold py-4 px-6 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_#16a34a] text-center uppercase tracking-wider active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
+                    About Us / Our Story
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+    <!-- Core Pillars Grid -->
+    <main class="max-w-6xl mx-auto px-4 pt-4 pb-12 md:pt-10 md:pb-16 space-y-12 md:space-y-20">
+        
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="text-xl md:text-3xl font-extrabold uppercase tracking-tight text-slate-900">Party Framework & Directives</h2>
+            <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-1.5 font-bold">Select a division to audit our protocols</p>
+        </div>
 
-        <!-- Section 1: Why We Created This Party -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-orange-500 text-white border-2 border-slate-900 rounded-lg flex items-center justify-center text-sm font-black shadow-[2px_2px_0px_#0f172a]">I</div>
-                <h2 class="text-xl md:text-2xl font-black uppercase text-slate-900 tracking-tight">Why We Created This Party</h2>
-            </div>
-            <div class="brutal-card p-5 md:p-6 rounded-xl space-y-4 text-slate-700 text-sm md:text-base leading-relaxed">
-                <p>
-                    The traditional socio-political structures have drifted away from absolute integrity, creating systematic administrative friction and policy fragmentation. <strong>Rashtra Shaktibadi Party (RSP)</strong> was established on <strong>June 8, 2026</strong>, to build an uncompromised, nation-first framework.
-                </p>
-                <p>
-                    We realized that superficial adjustments can no longer fix a system requiring fundamental architectural overhauls. We needed a core political platform engineered specifically around structural transparency, absolute constitutional discipline, and strict national sovereignty to cultivate next-generation civic accountability from the ground level.
-                </p>
-                <p>
-                    Humare samaj ko naye khwabon ki nahi, balki purane tute hue waadon ko theek karne ke liye ek kathor, anushasit aur nishpaksh kanooni dhande ki zaroorat hai. RSP koi aam rajneetik sangathan nahi hai; yeh ek dhacha hai jo kanoon ke shashan ko sabse upar rakhta hai aur bureaucracy ke andar chhupe hue bhrashtachar ko jad se khatam karne ke liye ek nayi disha deta hai.
-                </p>
-            </div>
-        </section>
-
-        <!-- Section 2: Mission & Vision Vectors -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Mission -->
-            <div class="brutal-card p-6 rounded-xl flex flex-col justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Manifesto Card -->
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 border-2 border-slate-900 rounded-xl flex items-center justify-center text-base mb-4 shadow-[2px_2px_0px_#0f172a]">
-                        <i class="fa-solid fa-crosshairs"></i>
+                    <div class="w-11 h-11 bg-orange-100 text-orange-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
+                        <i class="fa-solid fa-bullhorn"></i>
                     </div>
-                    <h3 class="text-lg font-black uppercase text-slate-900 tracking-tight mb-2">Our Mission</h3>
-                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
-                        To architect a highly disciplined, completely digitized, and fully auditable public governance matrix. RSP serves to directly empower the grassroots constituencies while removing bureaucratic red tape through aggressive technical decentralization. Humara lakshya har block aur constituency ko direct accountability se jodna hai.
-                    </p>
+                    <h3 class="text-lg md:text-xl font-extrabold uppercase tracking-tight text-slate-900 mb-1.5">01. Party Manifesto</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed mb-5">Our calculated vision document for administrative overhauls, youth development, and systemic socio-economic progress.</p>
                 </div>
+                <a href="manifesto.html" class="w-full bg-slate-900 text-white text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-orange-500 border border-slate-900 transition-colors block">
+                    Access Manifesto
+                </a>
             </div>
 
-            <!-- Vision -->
-            <div class="brutal-card p-6 rounded-xl flex flex-col justify-between">
+            <!-- Roles Card -->
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                 <div>
-                    <div class="w-10 h-10 bg-green-100 text-green-600 border-2 border-slate-900 rounded-xl flex items-center justify-center text-base mb-4 shadow-[2px_2px_0px_#0f172a]">
-                        <i class="fa-solid fa-eye"></i>
+                    <div class="w-11 h-11 bg-blue-100 text-blue-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
+                        <i class="fa-solid fa-users-gear"></i>
                     </div>
-                    <h3 class="text-lg font-black uppercase text-slate-900 tracking-tight mb-2">Our Vision</h3>
-                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
-                        A sovereign, automated, self-reliant powerhouse where legal equity is non-negotiable and resource allocations are entirely clean. We envision a society guided by strict national integrity protocols, high-performing institutions, and supreme public order, jahan har nagrik desh-pratham ki bhavna se prerit ho.
+                    <h3 class="text-lg md:text-xl font-extrabold uppercase tracking-tight text-slate-900 mb-1.5">02. Executive Roles</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed mb-5">Hierarchy allocation chart from block coordinators to the national executive board. Know your duties.</p>
+                </div>
+                <a href="roles.html" class="w-full bg-slate-900 text-white text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-blue-600 border border-slate-900 transition-colors block">
+                    View Structure
+                </a>
+            </div>
+
+            <!-- Rules Card -->
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <div class="w-11 h-11 bg-green-100 text-green-600 border border-slate-900 rounded-xl flex items-center justify-center text-lg mb-4 shadow-sm">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-extrabold uppercase tracking-tight text-slate-900 mb-1.5">03. Code of Rules</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed mb-5">The statutory constitution, structural discipline manuals, and non-negotiable guidelines for every active worker.</p>
+                </div>
+                <a href="rules.html" class="w-full bg-slate-900 text-white text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-green-600 border border-slate-900 transition-colors block">
+                    Read Guidelines
+                </a>
+            </div>
+        </div>
+
+        <!-- Dedicated Team / Leadership Section -->
+        <section class="space-y-10 pt-6">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-xl md:text-3xl font-extrabold uppercase tracking-tight text-slate-900">National Leadership Team</h2>
+                <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-1.5 font-bold">The force driving the vision forward</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2 md:px-0">
+                <!-- Leader 1 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Rajesh Sharma</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-orange-600 uppercase tracking-wider">National President</span>
+                </div>
+                <!-- Leader 2 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Amit Chaudhary</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-slate-600 uppercase tracking-wider">General Secretary</span>
+                </div>
+                <!-- Leader 3 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Dr. Vikram Singh</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-green-600 uppercase tracking-wider">Youth Wing Chief</span>
+                </div>
+                <!-- Leader 4 -->
+                <div class="party-card-solid p-4 rounded-xl text-center flex flex-col items-center justify-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-100 rounded-full border-2 border-slate-900 mb-3 flex items-center justify-center text-slate-400 overflow-hidden">
+                        <i class="fa-solid fa-user text-3xl"></i>
+                    </div>
+                    <h4 class="text-xs md:text-sm font-black uppercase text-slate-900 tracking-tight">Sanjay Mishra</h4>
+                    <span class="text-[9px] md:text-[10px] font-bold text-purple-600 uppercase tracking-wider">Chief Strategist</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Official Registry Block -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+            <!-- Communications Gateway -->
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl md:col-span-2 flex flex-col justify-between" data-aos="fade-right">
+                <div>
+                    <span class="text-[9px] md:text-[10px] font-black text-orange-600 uppercase tracking-widest block mb-1">Central Bureau</span>
+                    <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight mb-2">Official Secretariat Desk</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed max-w-xl">
+                        For institutional partnerships, legal correspondences, media coordination, or formal advisory notices, communicate with our desk registry via our dedicated operational server.
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Ideological Constitution -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-green-600 text-white border-2 border-slate-900 rounded-lg flex items-center justify-center text-sm font-black shadow-[2px_2px_0px_#0f172a]">II</div>
-                <h2 class="text-xl md:text-2xl font-black uppercase text-slate-900 tracking-tight">The Ideological Constitution</h2>
-            </div>
-            <div class="brutal-card p-5 md:p-8 rounded-2xl bg-slate-900 text-white border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] space-y-6">
-                <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
-                    Our ideology functions exactly like an immutable constitution—a non-negotiable, non-amendable code of absolute loyalty to collective national balance and policy hygiene.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm pt-2">
-                    <div class="border-l-2 border-orange-500 pl-3 space-y-1">
-                        <span class="font-black uppercase tracking-wider block text-orange-400">1. Sovereign Primacy</span>
-                        <p class="text-slate-400">Policy execution must strictly protect and honor national boundaries, indigenous intelligence systems, and self-contained economic operations first.</p>
+                <div class="mt-6 md:mt-8 pt-4 border-t-2 border-dashed border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-slate-400 text-xs"></i>
+                        <span class="text-[11px] md:text-xs font-mono font-bold text-slate-800 break-all">info@rashtrashaktibadiparty.in</span>
                     </div>
-                    <div class="border-l-2 border-green-500 pl-3 space-y-1">
-                        <span class="font-black uppercase tracking-wider block text-green-400">2. Complete Transparency</span>
-                        <p class="text-slate-400">Institutional records, executive decisions, and intra-party funding metrics operate on public audits to eliminate corporate or bureaucratic lobbying.</p>
-                    </div>
-                    <div class="border-l-2 border-blue-500 pl-3 space-y-1">
-                        <span class="font-black uppercase tracking-wider block text-blue-400">3. Youth Command Matrix</span>
-                        <p class="text-slate-400">Samaj ke youth ko sirf voter nahi, balki structural administrative design ka chief operations engineer banana tak RSP ki anushasit policy hai.</p>
-                    </div>
-                    <div class="border-l-2 border-purple-500 pl-3 space-y-1">
-                        <span class="font-black uppercase tracking-wider block text-purple-400">4. Rule of Absolute Code</span>
-                        <p class="text-slate-400">Intra-party discipline and ground worker operations are guided by a strict legal meritocracy. Non-performers and compromise-oriented systems are phased out immediately.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- NEW Section 4: Operational Pillars & Work Architecture -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-purple-600 text-white border-2 border-slate-900 rounded-lg flex items-center justify-center text-sm font-black shadow-[2px_2px_0px_#0f172a]">III</div>
-                <h2 class="text-xl md:text-2xl font-black uppercase text-slate-900 tracking-tight">Operational Roadmaps</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="party-card-solid p-5 rounded-xl border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a]">
-                    <h4 class="font-bold text-sm uppercase tracking-wider text-orange-600 mb-1">Youth Integration</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Developing real-time skill registries and technical clusters to engage active student frameworks and law advocates in grassroots legislative updates.</p>
-                </div>
-                <div class="party-card-solid p-5 rounded-xl border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a]">
-                    <h4 class="font-bold text-sm uppercase tracking-wider text-blue-600 mb-1">Constituency Auditing</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Every regional block layout operates under transparent monitoring models, making civic progress and budget deployments accessible online for all cadres.</p>
-                </div>
-                <div class="party-card-solid p-5 rounded-xl border-2 border-slate-900 shadow-[3px_3px_0px_#0f172a]">
-                    <h4 class="font-bold text-sm uppercase tracking-wider text-green-600 mb-1">Administrative Cleanse</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Introducing streamlined digital processes inside administrative bureaus to destroy systemic corruption and reduce friction for common citizens.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Proclamation Matrix -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-slate-900 text-white border-2 border-slate-900 rounded-lg flex items-center justify-center text-sm font-black shadow-[2px_2px_0px_#0f172a]">IV</div>
-                <h2 class="text-xl md:text-2xl font-black uppercase text-slate-900 tracking-tight">Foundational Proclamations</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="brutal-card p-4 rounded-xl text-center">
-                    <span class="text-xs font-black block text-slate-400 uppercase tracking-widest">Origin Seat</span>
-                    <p class="text-base font-bold text-slate-800 mt-1">Kolkata Registry</p>
-                </div>
-                <div class="brutal-card p-4 rounded-xl text-center">
-                    <span class="text-xs font-black block text-slate-400 uppercase tracking-widest">Charter Epoch</span>
-                    <p class="text-base font-bold text-slate-800 mt-1">08 June 2026</p>
-                </div>
-                <div class="brutal-card p-4 rounded-xl text-center">
-                    <span class="text-xs font-black block text-slate-400 uppercase tracking-widest">Protocol Status</span>
-                    <p class="text-base font-bold text-green-600 mt-1 uppercase tracking-wider">Active & Enforced</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- NEW Section 6: Direct Cadre Action Enlistment (JOINING PAGE LINK) -->
-        <section class="pt-6" data-aos="fade-up">
-            <div class="bg-slate-900 text-white border-2 border-slate-900 rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_#ea580c] text-center space-y-6">
-                <div class="max-w-xl mx-auto space-y-2">
-                    <span class="text-[10px] font-black text-orange-400 uppercase tracking-widest block">Operational Call to Action</span>
-                    <h3 class="text-xl md:text-3xl font-black uppercase tracking-tight">Be part of the structural shift</h3>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed">
-                        Agar aap desh-pratham ki is nishpaksh aur anushasit vichardhara se judna chahte hain, toh aaj hi humare centralized active database ka hissa banein. Local levels par badlav ki shuruat enlistment se hoti hai.
-                    </p>
-                </div>
-                
-                <div class="max-w-xs mx-auto pt-2">
-                    <!-- Direct Link to Join Page -->
-                    <a href="join.html" class="w-full bg-orange-500 text-white font-black text-center py-4 px-6 rounded-xl text-xs md:text-sm hover:bg-white hover:text-slate-900 border-2 border-slate-900 transition-all tracking-wider uppercase shadow-[3px_3px_0px_#ffffff] block active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">
-                        Enlist In The Cadre (Join Now)
+                    <a href="mailto:info@rashtrashaktibadiparty.in" class="bg-orange-500 text-white text-center text-xs font-bold py-2.5 px-5 rounded-lg border border-slate-900 shadow-[2px_2px_0px_#0f172a] hover:bg-slate-900 transition-colors uppercase tracking-wider block sm:inline-block">
+                        Send Mail
                     </a>
                 </div>
+            </div>
+
+            <!-- Join Banner Box -->
+            <div class="party-card-solid p-6 md:p-8 rounded-2xl bg-slate-900 text-white border-2 border-slate-900 shadow-[4px_4px_0px_#ea580c] flex flex-col justify-between" data-aos="fade-left">
+                <div>
+                    <span class="text-[9px] md:text-[10px] font-black text-orange-400 uppercase tracking-widest block mb-1">Operational Wing</span>
+                    <h3 class="text-xl md:text-2xl font-extrabold text-white tracking-tight mb-2">Join the Cadre</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Enlist in our decentralized active database to mobilize structural ground movements within your state constituency.
+                    </p>
+                </div>
+                <a href="join.html" class="mt-6 md:mt-8 w-full bg-orange-500 text-white font-black text-center py-3 rounded-xl text-xs hover:bg-white hover:text-slate-900 border border-slate-900 transition-all tracking-wider uppercase shadow-md block">
+                    Apply for Cadre
+                </a>
+            </div>
+        </section>
+
+        <!-- Official Logo & Social Connect Gateway -->
+        <section class="space-y-8 pt-8 border-t-2 border-dashed border-slate-200" data-aos="fade-up">
+            <div class="flex flex-col items-center justify-center text-center">
+                <div class="w-20 h-20 bg-white border-2 border-slate-900 rounded-full shadow-[3px_3px_0px_#0f172a] flex items-center justify-center overflow-hidden mb-4">
+                    <img src="banner.png" alt="RSP Official Logo" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-lg font-black uppercase text-slate-900 tracking-tight">Connect via Digital Channels</h3>
+                <p class="text-slate-500 text-xs max-w-sm mt-1">Stay updated with official bulletins, dynamic directives, and community updates straight from headquarters.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto px-2">
+                <a href="https://x.com/yourhandle" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
+                    <i class="fa-brands fa-x-twitter text-sm"></i> Twitter
+                </a>
+                <a href="https://facebook.com/yourpage" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
+                    <i class="fa-brands fa-facebook text-sm text-blue-600"></i> Facebook
+                </a>
+                <a href="https://instagram.com/yourhandle" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
+                    <i class="fa-brands fa-instagram text-sm text-pink-600"></i> Instagram
+                </a>
+                <a href="https://youtube.com/yourchannel" target="_blank" class="party-card-solid py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider text-slate-900">
+                    <i class="fa-brands fa-youtube text-sm text-red-600"></i> YouTube
+                </a>
             </div>
         </section>
 
     </main>
 
-    <!-- Hard Footer Block -->
-    <footer class="py-8 px-4 border-t-2 border-slate-900 bg-slate-50 text-center">
-        <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
-            © 2026 RASHTRASHAKTIBADIPARTY.IN   </p>
+    <!-- Hard Political Footer -->
+    <footer class="py-10 px-4 border-t-2 border-slate-900 bg-slate-50 text-center">
+        <div class="max-w-4xl mx-auto space-y-5">
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-[11px] md:text-xs font-bold uppercase tracking-wider text-slate-500">
+                <a href="about.html" class="hover:text-orange-600 transition">About Us</a>
+                <a href="manifesto.html" class="hover:text-orange-600 transition">Manifesto</a>
+                <a href="roles.html" class="hover:text-orange-600 transition">Leadership</a>
+                <a href="rules.html" class="hover:text-orange-600 transition">Constitutional Rules</a>
+            </div>
+            <div class="h-px w-12 bg-slate-300 mx-auto"></div>
+            <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] leading-relaxed">
+                © 2026 RASHTRASHAKTIBADIPARTY.IN
+            </p>
+        </div>
     </footer>
 
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            duration: 700
+        });
+
+        // Mobile Navbar Controls
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const drawer = mobileMenu.querySelector('div');
+
+        // Protection Scripts
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('copy', event => event.preventDefault());
+        document.addEventListener('cut', event => event.preventDefault());
+        
+        document.body.style.webkitUserSelect = "none";
+        document.body.style.userSelect = "none";
+
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0');
+                drawer.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0');
+            drawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) closeMenu();
+        });
+    </script>
 </body>
 </html>
